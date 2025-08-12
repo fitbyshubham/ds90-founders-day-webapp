@@ -1,6 +1,6 @@
 # 🚀 One-Day "Thinking in React" Crash Course (For Complete Beginners)
 
-> **Goal**: Transform students with **ZERO programming knowledge** into **React-ready developers** in just **6 hours** — prepared to dive into **Next.js** on Day 2.
+> **Goal**: Transform students with **ZERO programming knowledge** into **React-ready developers**  — prepared to dive into **Next.js** on Day 2.
 
 ---
 
