@@ -52,10 +52,10 @@ Next.js 13+ introduced the App Router with a new `app/` directory structure. Let
 - **`app/`**: The main directory for your application code using the App Router
 
   - **`page.tsx`**: Defines the UI for a route
-  - **`layout.tsx`**: Shared UI wrapper for a segment and its children
-  - **`loading.tsx`**: Loading UI for a segment
-  - **`error.tsx`**: Error handling UI for a segment
-  - **`not-found.tsx`**: 404 UI for a segment
+  - **`layout.tsx`**: A shared wrapper for that route and its child routes (like a common header/footer).
+  - **`loading.tsx`**: Loading UI for a segment, i.e, the UI to show when a page is loading.
+  - **`error.tsx`**: Error handling UI for a segment, i.e, The UI to show when there’s an error in a page.
+  - **`not-found.tsx`**: 404 UI for a segment, i.e, when something is not found. 
 
 - **`app/api/`**: API routes for creating endpoints
 
@@ -67,12 +67,13 @@ Next.js 13+ introduced the App Router with a new `app/` directory structure. Let
 
 ### Common Organizational Patterns (Not Enforced)
 
-The following are common patterns but are **not required** by Next.js:
+**Not enforced**, but developers often use them for better organization.
+
 
 - **Component Organization**
 
-  - `app/components/`: Reusable UI components
-  - `app/ui/`: Basic UI elements
+  - `app/components/`: Reusable UI pieces (buttons, cards, navbars).
+  - `app/ui/`:  Basic UI elements (like smaller building blocks).
 
 - **Route Organization**
 
@@ -80,8 +81,8 @@ The following are common patterns but are **not required** by Next.js:
 
 - **Other Common Folders**
   - `app/lib/` or `lib/`: Utility functions and shared code
-  - `app/styles/`: Component or page-specific styles
-  - `app/hooks/`: Custom React hooks
+  - `app/styles/`: CSS files for components/pages.
+  - `app/hooks/`: Custom React hooks (reusable logic).
   - `app/context/`: React context providers
   - `app/types/` or `types/`: TypeScript type definitions
 
@@ -89,9 +90,11 @@ The following are common patterns but are **not required** by Next.js:
 
 Next.js gives you freedom in where you place most files. For example:
 
-- You can put components directly in route folders or in a central components directory
-- Utility functions can live in the route where they're used or in a shared directory
-- Styles can be colocated with components or centralized
+- You can put components anywhere — inside routes or in a common folder.
+
+- You can keep styles with the component or in a central styles folder.
+
+- You can keep utilities near where they are used or in a shared folder.
 
 ## Summary
 
