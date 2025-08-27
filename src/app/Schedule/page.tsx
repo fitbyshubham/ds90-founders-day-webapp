@@ -346,7 +346,7 @@ export default function Schedule() {
                 location="Near Auditorium Steps/CDH"
                 startTime="15:30"
                 endTime="16:30"
-                gradient="blueCyan"
+                gradient="purplePink"
               />
               <ScheduleCard
                 day="FRI"
@@ -361,7 +361,7 @@ export default function Schedule() {
                 location="BML Munjal Auditorium"
                 startTime="16:15"
                 endTime="16:45"
-                gradient="indigoPurple"
+                gradient="blueCyan"
               />
               <ScheduleCard
                 day="FRI"
@@ -376,7 +376,7 @@ export default function Schedule() {
                 location="BML Munjal Auditorium"
                 startTime="17:00"
                 endTime="18:30"
-                gradient="greenTeal"
+                gradient="indigoPurple"
               />
               <ScheduleCard
                 day="FRI"
@@ -391,7 +391,7 @@ export default function Schedule() {
                 location="Rose Bowl"
                 startTime="18:45"
                 endTime="20:15"
-                gradient="orangeRed"
+                gradient="greenTeal"
               />
               <ScheduleCard
                 day="FRI"
@@ -406,7 +406,7 @@ export default function Schedule() {
                 location="Main Gate"
                 startTime="20:20"
                 endTime="20:30"
-                gradient="greenTeal"
+                gradient="orangeRed"
               />
               <ScheduleCard
                 day="FRI"
@@ -421,7 +421,7 @@ export default function Schedule() {
                 location="CDH"
                 startTime="20:30"
                 endTime="20:55"
-                gradient="indigoPurple"
+                gradient="purplePink"
               />
               <ScheduleCard
                 day="FRI"
@@ -436,7 +436,7 @@ export default function Schedule() {
                 location="Headmaster's Lawn"
                 startTime="20:30"
                 endTime="21:30"
-                gradient="orangeRed"
+                gradient="blueCyan"
               />              
             </>
           )}

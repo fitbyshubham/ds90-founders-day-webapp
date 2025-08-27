@@ -49,17 +49,17 @@ export default function ScheduleCard({
   }
 
   return (
-    <div className="flex space-x-4 mb-6">
+    <div className="flex flex-row md:space-x-4 mb-6">
 
-      <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-4 w-16">
-        <span className="text-lg text-gray-500">{day}</span>
-        <span className="text-lg font-semibold text-gray-500">{date}</span>
+      <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-4 md:w-20 mb-3 md:mb-0">
+        <span className="text-base md:text-lg text-gray-500">{day}</span>
+        <span className="text-base md:text-lg font-semibold text-gray-500">{date}</span>
 
         {startTime && endTime && (
           <>
-            <span className="text-lg font-bold mt-1">{startTime}</span>
-            <span className="text-sm font-semibold text-gray-500 text-center">To</span>
-            <span className="text-lg font-bold">{endTime}</span>
+            <span className="text-base md:text-lg font-bold mt-1">{startTime}</span>
+            <span className="text-xs md:text-sm font-semibold text-gray-500 text-center">To</span>
+            <span className="text-base md:text-lg font-bold">{endTime}</span>
           </>
         )}
       </div>
@@ -69,37 +69,37 @@ export default function ScheduleCard({
           onClick={() => setIsExpanded(!isExpanded)}
         >
         <div>
-          <h2 className="text-lg font-bold">{eventName}</h2>
+          <h2 className="text-base md:text-lg font-bold">{eventName}</h2>
           {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </div>  
 
         <div
-          className={`transition-all duration-500 overflow-hidden ${
-            isExpanded ? "max-h-40 my-2" : "max-h-10"
+          className={`grid transition-all duration-500 overflow-hidden ${
+            isExpanded ? "grid-rows-[1fr] my-2" : "grid-rows-[0fr]"
           }`}
         >
-          <p className="text-sm opacity-90">
+          <p className="text-sm md:text-base opacity-90 mb-2">
             {isExpanded ? detail : desc}
           </p>
         </div>
 
-        <p className="flex items-center text-sm opacity-90">
+        <p className="flex items-center text-sm md:text-base opacity-90">
           <PersonStanding size={14} className="mr-1" />
           No. of People Attending: {attendees}
         </p>
 
-        <div className="flex items-center text-sm opacity-90">
+        <div className="flex items-center text-sm md:text-base opacity-90">
           <MapPin size={14} className="mr-1" />
           {location}
         </div>
 
-        <div className="flex space-x-2 mt-3">
+        <div className="flex mt-3">
           <button
           onClick ={(e) => {
             e.stopPropagation();
             handleClick();
           }}  
-          className={`text-gray-800 text-sm px-3 py-1 rounded-lg shadow ${attending ? "bg-red-500 border-2 border-red-800" : "bg-green-500 border-2 border-green-800"}`}>
+          className={`w-full md:w-auto text-gray-800 text-sm md:text-base px-3 py-1 rounded-lg shadow ${attending ? "bg-red-500 border-2 border-red-800" : "bg-green-500 border-2 border-green-800"}`}>
             {attending ? "Decline" : "Accept"}
           </button>
         </div>  
