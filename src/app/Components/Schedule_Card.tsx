@@ -75,10 +75,12 @@ export default function ScheduleCard({
 
         <div
           className={`transition-all duration-500 overflow-hidden ${
-            isExpanded ? "max-h-40 my-2" : "max-h-0" {desc}
+            isExpanded ? "max-h-40 my-2" : "max-h-10"
           }`}
         >
-          <p className="text-sm opacity-90">{detail}</p>
+          <p className="text-sm opacity-90">
+            {isExpanded ? detail : desc}
+          </p>
         </div>
 
         <p className="flex items-center text-sm opacity-90">
