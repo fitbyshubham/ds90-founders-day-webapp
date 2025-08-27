@@ -65,7 +65,7 @@ export default function ScheduleCard({
       </div>
 
         <div
-          className={`flex-1 bg-gradient-to-r ${gradientMap[gradient]} text-white rounded-xl shadow-lg p-4 transition-transform hover:scale-[1.02]`}
+          className={`flex-1 bg-gradient-to-r ${gradientMap[gradient]} text-white rounded-xl shadow-lg p-4 transition-transform duration-200 ease-out hover:scale-[1.02]`}
           onClick={() => setIsExpanded(!isExpanded)}
         >
         <div>
@@ -75,7 +75,7 @@ export default function ScheduleCard({
 
         <div
           className={`grid transition-all duration-500 overflow-hidden ${
-            isExpanded ? "grid-rows-[1fr] my-2" : "grid-rows-[0fr]"
+            isExpanded ? "grid-rows-[1fr] mt-2" : "grid-rows-[0fr]"
           }`}
         >
           <p className="text-sm md:text-base opacity-90 mb-2">
@@ -85,7 +85,7 @@ export default function ScheduleCard({
 
         <p className="flex items-center text-sm md:text-base opacity-90">
           <PersonStanding size={14} className="mr-1" />
-          No. of People Attending: {attendees}
+          Number of People Attending: {attendees}
         </p>
 
         <div className="flex items-center text-sm md:text-base opacity-90">
@@ -100,7 +100,7 @@ export default function ScheduleCard({
             handleClick();
           }}  
           className={`w-full md:w-auto text-gray-800 text-sm md:text-base px-3 py-1 rounded-lg shadow ${attending ? "bg-red-500 border-2 border-red-800" : "bg-green-500 border-2 border-green-800"}`}>
-            {attending ? "Decline" : "Accept"}
+            {attending ? "Don't Notify" : "Notify"}
           </button>
         </div>  
       </div>
