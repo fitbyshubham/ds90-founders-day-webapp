@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, PersonStanding } from "lucide-react"; // or Heroicons if you prefer
+import { MapPin, PersonStanding, ChevronDown, ChevronUp } from "lucide-react"; // or Heroicons if you prefer
 import {useState} from 'react';
 
 interface ScheduleCardProps {
@@ -10,8 +10,8 @@ interface ScheduleCardProps {
   endTime?: string;  // optional
   eventName: string;
   desc: string;
+  detail: string;
   location: string;
-  status?: "accepted" | "pending"; // optional
   gradient?: keyof typeof gradientMap;
 }
 
@@ -30,13 +30,14 @@ export default function ScheduleCard({
   endTime,
   eventName,
   desc,
+  detail,
   location,
-  status = "pending",
   gradient = "purplePink",
 }: ScheduleCardProps) {
 
   const [attendees, setAttendees] = useState(0)
   const [attending, setAttending] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false)
   const handleClick = () =>{
     if(attending){
       setAttendees(attendees - 1)
@@ -65,9 +66,21 @@ export default function ScheduleCard({
 
         <div
           className={`flex-1 bg-gradient-to-r ${gradientMap[gradient]} text-white rounded-xl shadow-lg p-4 transition-transform hover:scale-[1.02]`}
+          onClick={() => setIsExpanded(!isExpanded)}
         >
-        <h2 className="text-lg font-bold">{eventName}</h2>
-        <p className="text-sm opacity-90">{desc}</p>
+        <div>
+          <h2 className="text-lg font-bold">{eventName}</h2>
+          {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+        </div>  
+
+        <div
+          className={`transition-all duration-500 overflow-hidden ${
+            isExpanded ? "max-h-40 my-2" : "max-h-0" {desc}
+          }`}
+        >
+          <p className="text-sm opacity-90">{detail}</p>
+        </div>
+
         <p className="flex items-center text-sm opacity-90">
           <PersonStanding size={14} className="mr-1" />
           No. of People Attending: {attendees}
@@ -78,13 +91,16 @@ export default function ScheduleCard({
           {location}
         </div>
 
-          <div className="flex space-x-2 mt-3">
-            <button
-            onClick = {handleClick}  
-            className={`text-gray-800 text-sm px-3 py-1 rounded-lg shadow ${attending ? "bg-red-500 border-2 border-red-800" : "bg-green-500 border-2 border-green-800"}`}>
-              {attending ? "Decline" : "Accept"}
-            </button>
-          </div>
+        <div className="flex space-x-2 mt-3">
+          <button
+          onClick ={(e) => {
+            e.stopPropagation();
+            handleClick();
+          }}  
+          className={`text-gray-800 text-sm px-3 py-1 rounded-lg shadow ${attending ? "bg-red-500 border-2 border-red-800" : "bg-green-500 border-2 border-green-800"}`}>
+            {attending ? "Decline" : "Accept"}
+          </button>
+        </div>  
       </div>
     </div>
   );
