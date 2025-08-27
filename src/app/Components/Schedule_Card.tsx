@@ -16,11 +16,11 @@ interface ScheduleCardProps {
 }
 
 const gradientMap: Record<string, string> = {
-  purplePink: "from-purple-500 to-pink-500",
-  blueCyan: "from-blue-500 to-cyan-400",
-  indigoPurple: "from-indigo-500 to-purple-500",
-  greenTeal: "from-green-400 to-teal-500",
-  orangeRed: "from-orange-400 to-red-500",
+  purplePink: "from-purple-600 to-pink-400",
+  blueCyan: "from-blue-600 to-cyan-400",
+  indigoPurple: "from-indigo-600 to-purple-400",
+  greenTeal: "from-green-600 to-teal-400",
+  orangeRed: "from-red-600 to-orange-400",
 }
 
 export default function ScheduleCard({
