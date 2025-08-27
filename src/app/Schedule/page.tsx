@@ -309,20 +309,174 @@ export default function Schedule() {
           {selectedDay === "Day 3" && (
             <>
               <ScheduleCard
-                day="SUN"
-                date="8"
-                eventName="Final Presentations"
-                desc="Hackathon team project demos"
-                location="Main Stage"
-                gradient=""
+                day="SAT"
+                date="18"
+                eventName="Breakfast"
+                desc="Breakfast for Students and Staff"
+                location="CDH"
+                startTime="09:00"
+                endTime="09:25"
+                gradient="purplePink"
               />
               <ScheduleCard
-                day="SUN"
-                date="8"
-                eventName="Closing Ceremony"
-                desc="Awards and Farewell"
-                location="Auditorium"
-                gradient=""
+                day="SAT"
+                date="18"
+                eventName="Parents and Old Boys Enter"
+                desc="Parents and Old Boys enter the school"
+                location="Main Gate"
+                startTime="09:30"
+                endTime="16:30"
+                gradient="blueCyan"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Jaipur House Pagal Gymkhana"
+                desc="Fun activities and competitions organized by Jaipur House"
+                location="Skinners"
+                startTime="10:30"
+                endTime="15:00"
+                gradient="indigoPurple"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="DSOBS Annual General Meeting"
+                desc="Meeting of DSOBS Members"
+                location="Kilachand Library"
+                startTime="11:00"
+                endTime="12:30"
+                gradient="greenTeal"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Headmaster's Lunch"
+                desc="Lunch for Chief Guest, Board of Governors, IPSS Members, Donors, Invited Guests & Class of 1955"
+                location="HM’s Garden"
+                startTime="12:30"
+                endTime="14:30"
+                gradient="orangeRed"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Lunch for All"
+                desc="Lunch for all at Jaipur House Pagal Gymkhana"
+                location="Skinners"
+                startTime="13:00"
+                endTime="14:00"
+                gradient="purplePink"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Light Tea for IPSS Members"
+                desc="Tea for IPSS Members"
+                location="Kilachand Library Garden"
+                startTime="14:45"
+                endTime="15:00"
+                gradient="blueCyan"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="IPSS Meeting"
+                desc="Meeting of IPSS Members"
+                location="Kilachand Library"
+                startTime="15:00"
+                endTime="16:45"
+                gradient="indigoPurple"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Chief Guest Interaction"
+                desc="Chief Guest interacts with senior students and faculty"
+                location="Art & Media Centre"
+                startTime="15:00"
+                endTime="15:45"
+                gradient="greenTeal"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Chief Guest Weekly Interaction"
+                desc="Chief Guest spends time with the Weekly Team"
+                location="Art & Media Centre"
+                startTime="15:45"
+                endTime="16:15"
+                gradient="orangeRed"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Chief Guest Photograph"
+                desc="Photograph session with Chief Guest"
+                location="Guru’s Lawn (Near Main Building)"
+                startTime="16:20"
+                endTime="16:40"
+                gradient="purplePink"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Tea for IPSS Members"
+                desc="Evening Tea for IPSS Members"
+                location="Kilachand Library Garden"
+                startTime="16:45"
+                endTime="17:15"
+                gradient="blueCyan"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Founder’s Day Speeches & Programme"
+                desc="Founder’s Day main function and programme"
+                location="Rose Bowl"
+                startTime="18:00"
+                endTime="20:00"
+                gradient="indigoPurple"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Closing Song & Visual Display"
+                desc="Closing song ‘We Did Start the Fire’ with boys’ dance, drone/visual display"
+                location="Rose Bowl"
+                startTime="20:00"
+                endTime="20:20"
+                gradient="greenTeal"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Founder’s Day Music Programme"
+                desc="Music Performance as part of Founder’s Day celebrations"
+                location="Rose Bowl"
+                startTime="20:20"
+                endTime="21:00"
+                gradient="orangeRed"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Chief Guest Departure"
+                desc="Chief Guest departs from campus"
+                location="HM’s Residence"
+                startTime="21:15"
+                endTime="21:30"
+                gradient="purplePink"
+              />
+              <ScheduleCard
+                day="SAT"
+                date="18"
+                eventName="Students Departure"
+                desc="Students leave with parents after Housemaster’s permission"
+                location="Campus"
+                startTime="21:15"
+                endTime="21:30"
+                gradient="blueCyan"
               />
             </>
           )}

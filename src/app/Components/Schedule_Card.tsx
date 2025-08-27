@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, PersonStanding } from "lucide-react"; // or Heroicons if you prefer
+import {useState} from 'react';
 
 interface ScheduleCardProps {
   day: string;
@@ -33,18 +34,31 @@ export default function ScheduleCard({
   status = "pending",
   gradient = "purplePink",
 }: ScheduleCardProps) {
+
+  const [attendees, setAttendees] = useState(0)
+  const [attending, setAttending] = useState(false)
+  const handleClick = () =>{
+    if(attending){
+      setAttendees(attendees - 1)
+      setAttending(false)
+    }else{
+      setAttendees(attendees + 1)
+      setAttending(true)
+    }
+  }
+
   return (
     <div className="flex space-x-4 mb-6">
 
       <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-4 w-16">
         <span className="text-lg text-gray-500">{day}</span>
-        <span className="text-lg font-bold">{date}</span>
+        <span className="text-lg font-semibold text-gray-500">{date}</span>
 
         {startTime && endTime && (
           <>
-            <span className="text-lg font-semi-bold mt-1">{startTime}</span>
-            <span className="text-sm text-gray-500 text-center">To</span>
-            <span className="text-lg font-semi-bold">{endTime}</span>
+            <span className="text-lg font-bold mt-1">{startTime}</span>
+            <span className="text-sm font-semibold text-gray-500 text-center">To</span>
+            <span className="text-lg font-bold">{endTime}</span>
           </>
         )}
       </div>
@@ -56,7 +70,7 @@ export default function ScheduleCard({
         <p className="text-sm opacity-90">{desc}</p>
         <p className="flex items-center text-sm opacity-90">
           <PersonStanding size={14} className="mr-1" />
-          No. of People Attending: 
+          No. of People Attending: {attendees}
         </p>
 
         <div className="flex items-center text-sm opacity-90">
@@ -64,18 +78,13 @@ export default function ScheduleCard({
           {location}
         </div>
 
-        {status === "accepted" ? (
-          <p className="text-xs mt-2">✔ Accepted</p>
-        ) : (
           <div className="flex space-x-2 mt-3">
-            <button className="bg-white text-gray-800 text-sm px-3 py-1 rounded-lg shadow">
-              Accept
-            </button>
-            <button className="bg-white/20 border border-white/50 text-sm px-3 py-1 rounded-lg">
-              Decline
+            <button
+            onClick = {handleClick}  
+            className={`text-gray-800 text-sm px-3 py-1 rounded-lg shadow ${attending ? "bg-red-500 border-2 border-red-800" : "bg-green-500 border-2 border-green-800"}`}>
+              {attending ? "Decline" : "Accept"}
             </button>
           </div>
-        )}
       </div>
     </div>
   );
