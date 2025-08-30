@@ -2,7 +2,7 @@
 
 import { motion, useSpring, AnimatePresence } from "framer-motion";
 import { MapPin, PersonStanding, ChevronDown, ChevronUp } from "lucide-react"; // or Heroicons if you prefer
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import AnimatedNumber from "./Animations";
 
 interface ScheduleCardProps {
@@ -75,29 +75,33 @@ export default function ScheduleCard({
           </div>  
 
 
-          <AnimatePresence>
-            {isExpanded && (
-              <motion.div
-              initial={{height: 0, opacity: 0}}
-              animate={{height: "auto", opacity: 1}}
-              exit={{height: 0, opacity: 0}}
-              transition={{duration: 0.3, ease:"easeInOut"}}
-              className="overflow-hidden"
-              >
-               <p className="text-sm md:text-base opacity-90 mb-2">{detail}</p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* <div
-            className={`grid transition-all duration-500 overflow-hidden ${
-              isExpanded ? "grid-rows-[1fr] mt-2" : "grid-rows-[0fr]"
-            }`}
+          <motion.div
+            layout="size"
+            transition={{type: "spring", bounce: 0.3, duration: 0.3}}
+            className="my-2"
           >
-            <p className="text-sm md:text-base opacity-90 mb-2">
-              {isExpanded ? detail : desc}
-            </p>
-          </div> */}
+            <AnimatePresence mode="wait" initial={false}>
+              {isExpanded ? (
+                <motion.p
+                key="detail"
+                initial={{opacity: 0, y: -4}}
+                animate={{opacity: 1, y: 0}}
+                exit={{opacity: 0, y:4}}
+                transition={{duration: 0.18}}
+                className="text-sm md:text-base opacity-90"
+                >{detail}</motion.p>
+              ):
+              <motion.p
+                key="detail"
+                initial={{opacity: 0, y: -4}}
+                animate={{opacity: 1, y: 0}}
+                exit={{opacity: 0, y:4}}
+                transition={{duration: 0.18}}
+                className="text-sm md:text-base opacity-90"
+                >{desc}</motion.p>
+              }
+            </AnimatePresence>
+          </motion.div>
 
           <p className="flex items-center text-sm md:text-base opacity-90">
             <PersonStanding size={14} className="mr-1" />
@@ -148,19 +152,37 @@ export default function ScheduleCard({
             {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
           </div>  
 
-          <div
-            className={`grid transition-all duration-500 overflow-hidden ${
-              isExpanded ? "grid-rows-[1fr] mt-2" : "grid-rows-[0fr]"
-            }`}
+          <motion.div
+            layout="size"
+            transition={{type: "spring", bounce: 0.25, duration: 0.5}}
+            className="mt-2"
           >
-            <p className="text-sm md:text-base opacity-90 mb-2">
-              {isExpanded ? detail : desc}
-            </p>
-          </div>
+            <AnimatePresence mode="wait" initial={false}>
+              {isExpanded ? (
+                <motion.p
+                key="detail"
+                initial={{opacity: 0, y: -4}}
+                animate={{opacity: 1, y: 0}}
+                exit={{opacity: 0, y:4}}
+                transition={{duration: 0.18}}
+                className="text-sm md:text-base opacity-90"
+                >{detail}</motion.p>
+              ):
+              <motion.p
+                key="detail"
+                initial={{opacity: 0, y: -4}}
+                animate={{opacity: 1, y: 0}}
+                exit={{opacity: 0, y:4}}
+                transition={{duration: 0.18}}
+                className="text-sm md:text-base opacity-90"
+                >{desc}</motion.p>
+              }
+            </AnimatePresence>
+          </motion.div>  
 
           <p className="flex items-center text-sm md:text-base opacity-90">
             <PersonStanding size={14} className="mr-1" />
-            Number of People Attending: {attendees}
+            Number of People Attending: <AnimatedNumber value={attendees} />
           </p>
 
           <div className="flex items-center text-sm md:text-base opacity-90">
@@ -173,8 +195,9 @@ export default function ScheduleCard({
               e.stopPropagation();
               handleClick();
             }}  
-            className={`w-full md:w-auto text-gray-800 text-sm md:text-base px-3 py-1 rounded-lg shadow 
-            ${attending ? "bg-red-500 border-2 border-red-800" : "bg-green-500 border-2 border-green-800"}`}
+            className={`w-full md:w-auto text-gray-800 text-sm md:text-base px-3 py-1 rounded-lg shadow transform 
+            transition active:scale-95 active:opacity-80 ${attending ? "bg-red-500 border-2 border-red-800" : 
+            "bg-green-500 border-2 border-green-800"}`}
             >
               {attending ? "Don't Notify" : "Notify"}
             </button>
