@@ -51,16 +51,14 @@ export default function ScheduleCard({
   return (
     <div className="flex flex-row md:space-x-4 mb-6">
 
-      <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow p-4 md:w-20 mb-3 md:mb-0">
-        <span className="text-base md:text-lg text-gray-500">{day}</span>
-        <span className="text-base md:text-lg font-semibold text-gray-500">{date}</span>
-
+      <div className="flex items-center justify-between md:w-20 mb-2 md:mb-0">
+        <span className="bg-white/20 text-xs font-semibold px-2 py-1 rounded-md">
+          {day}{date}
+        </span>
         {startTime && endTime && (
-          <>
-            <span className="text-base md:text-lg font-bold mt-1">{startTime}</span>
-            <span className="text-xs md:text-sm font-semibold text-gray-500 text-center">To</span>
-            <span className="text-base md:text-lg font-bold">{endTime}</span>
-          </>
+          <span className="text-xs font-medium">
+            {startTime} - {endTime}
+          </span>
         )}
       </div>
 
