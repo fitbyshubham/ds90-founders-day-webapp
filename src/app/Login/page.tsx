@@ -6,7 +6,8 @@ import { useRouter } from "next/navigation";
 export default function Login(){
   const [isSignup, setIsSignup] = useState(false);
   const router = useRouter()
-  const handleRedirect = () => {
+  const handleRedirect = (e: React.FormEvent) => {
+    e.preventDefault()
     router.push("/OTP")
   }
 
@@ -77,7 +78,9 @@ export default function Login(){
             {/* Back (Signup) */}
             <div className="absolute w-full h-full flex flex-col justify-center items-center gap-5 bg-beige-200 border-3 border-brown-800 rounded shadow-[4px_4px_0px_black] [transform:rotateY(180deg)] [backface-visibility:hidden]">
               <h2 className="text-2xl font-extrabold text-brown-800">Sign up</h2>
-              <form className="flex flex-col items-center gap-4">
+              <form 
+              onSubmit={handleRedirect}
+              className="flex flex-col items-center gap-4">
                 <input
                   type="text"
                   placeholder="Name"
@@ -89,12 +92,10 @@ export default function Login(){
                   className="w-60 h-10 px-3 border-3 bg-beige-100 border-brown-800 rounded shadow-[4px_4px_0px_black] font-semibold text-gray-800 placeholder-gray-500 focus:border-amber-100 outline-none"
                 />
                 <button 
-                onClick={(e) => (e.preventDefault, handleRedirect)}
+                type="submit"
                 className="w-32 h-10 border-3 border-brown-800 rounded shadow-[4px_4px_0px_black] font-semibold text-gray-800 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition">
                   Confirm!
                 </button>
-
-
               </form>
             </div>
           </div>
