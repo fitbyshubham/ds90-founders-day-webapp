@@ -1,61 +1,105 @@
+"use client"
+import { useState } from "react";
+import './login.css'
+import { useRouter } from "next/navigation";
+
 export default function Login(){
-    return(
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <div className="relative flex flex-col items-center gap-8 -translate-y-48">
+  const [isSignup, setIsSignup] = useState(false);
+  const router = useRouter()
+  const handleRedirect = () => {
+    router.push("/OTP")
+  }
 
-                <label className="relative flex flex-col items-center justify-center w-[50px] h-[20px] gap-8">
-                    <input type="checkbox" className="peer hidden" />
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-beige-50">
+      <div className="relative flex flex-col items-center">
+        {/* Toggle */}
+        <label className="relative flex items-center justify-center gap-6 w-12 h-5 mb-8 cursor-pointer">
+          <input
+            type="checkbox"
+            className="sr-only peer"
+            checked={isSignup}
+            onChange={() => setIsSignup(!isSignup)}
+          />
 
-                    <span className="absolute inset-0 cursor-pointer rounded-md border-2 border-gray-800 bg-white 
-                    shadow-[4px_4px_0_0_#323232] transition-colors duration-300 peer-checked:bg-blue-500"></span>
-                    <span className="before:absolute before:content-['Log_in'] before:-left-[70px] before:top-0 
-                    before:underline before:font-semibold before:text-gray-800 after:absolute after:content-['Sign_up'] 
-                    after:left-[70px] after:top-0 after:w-[100px] after:font-semibold after:text-gray-800 
-                    peer-checked:before:no-underline peer-checked:after:underline"></span>
+          {/* Log in text */}
+          <span
+            className={`absolute -left-20 ${
+              !isSignup ? "font-bold text-black" : "font-semibold text-gray-800"
+            }`}
+          >
+            Log in
+          </span>
 
-                    <span className="before:absolute before:content-[''] before:h-[20px] before:w-[20px] before:rounded-md before:border-2 
-                    before:border-gray-800 before:bg-white before:shadow-[0_3px_0_#323232] before:transition-transform before:duration-300 
-                    peer-checked:before:translate-x-[30px]"></span>
+          {/* Sign up text */}
+          <span
+            className={`absolute left-20 ${
+              isSignup ? "font-bold text-black" : "font-semibold text-gray-800"
+            }`}
+          >
+            Sign up
+          </span>
 
-                    <div className="relative w-[300px] h-[350px] text-center transition-transform duration-700 [transform-style:preserve-3d] 
-                    [perspective:1000px] peer-checked:[transform:rotateY(180deg)]">
+          {/* Slider bar */}
+          <span className="w-full h-full bg-white border-2 border-gray-800 rounded peer-checked:bg-blue-500 transition"></span>
 
-                        <div className="absolute inset-0 flex flex-col items-center gap-5 rounded-md border-2 border-gray-800 bg-gray-200 p-5
-                        shadow-[4px_4px_0_0_#323232] backface-hidden">
-                            <div className="my-5 text-2xl font-black text-gray-800">Log in</div>
-                            <form className="flex flex-col items-center gap-5 w-full">
-                                <input type="text" placeholder="User Name" className="w-[250px] h-[40px] rounded-md border-2 border-gray-800 
-                                bg-white px-3 py-1 text-[15px] font-semibold text-gray-800 shadow-[4px_4px_0_0_#323232] outline-none 
-                                focus:border-blue-500 placeholder:text-gray-500 placeholder:opacity-80" />
-                                <input type="password" placeholder="Password" className="w-[250px] h-[40px] rounded-md border-2 border-gray-800 
-                                bg-white px-3 py-1 text-[15px] font-semibold text-gray-800 shadow-[4px_4px_0_0_#323232] outline-none 
-                                focus:border-blue-500 placeholder:text-gray-500 placeholder:opacity-80" />
-                                <button className="mt-5 w-[120px] h-[40px] rounded-md border-2 border-gray-800 bg-white text-lg font-semibold
-                                text-gray-800 shadow-[4px_4px_0_0_#323232] active:shadow-none active:translate-x-[3px] active-translate-y-[3px]">
-                                    Let's go!
-                                </button>
-                            </form>
-                        </div>
+          {/* Knob */}
+          <span className="absolute h-5 w-5 bg-white border-2 border-gray-800 rounded shadow-[3px_3px_0px_black] transition-transform peer-checked:translate-x-7"></span>
+        </label>
 
-                        <div className="absolute inset-0 flex flex-col items-center gap-5 rounded-md border-2 border-gray-800 bg-gray-200 p-5
-                        [transform:rotateY(180deg)] shadow-[4px_4px_0_0_#323232] backface-hidden">
-                            <div className="my-5 text-2xl font-black text-gray-800">Sign up</div>
-                            <form className="flex flex-col items-center gap-5 w-full">
-                                <input type="text" placeholder="Full Name" className="w-[250px] h-[40px] rounded-md border-2 border-gray-800 
-                                bg-white px-3 py-1 text-[15px] font-semibold text-gray-800 shadow-[4px_4px_0_0_#323232] outline-none 
-                                focus:border-blue-500 placeholder:text-gray-500 placeholder:opacity-80" />
-                                <input type="tel" placeholder="Phone Number" className="w-[250px] h-[40px] rounded-md border-2 border-gray-800 
-                                bg-white px-3 py-1 text-[15px] font-semibold text-gray-800 shadow-[4px_4px_0_0_#323232] outline-none 
-                                focus:border-blue-500 placeholder:text-gray-500 placeholder:opacity-80" />
-                                <button className="mt-5 w-[120px] h-[40px] rounded-md border-2 border-gray-800 bg-white text-lg font-semibold
-                                text-gray-800 shadow-[4px_4px_0_0_#323232] active:shadow-none active:translate-x-[3px] active-translate-y-[3px]">
-                                    Let's go!
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </label>
+        {/* Flip Card */}
+        <div className="relative w-[300px] h-[350px] [perspective:1000px]">
+          <div
+            className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
+              isSignup ? "[transform:rotateY(180deg)]" : ""
+            }`}
+          >
+            {/* Front (Login) */}
+            <div className="absolute w-full h-full flex flex-col justify-center items-center gap-5 bg-beige-200 border-3 border-brown-800 rounded shadow-[4px_4px_0px_black] [backface-visibility:hidden]">
+              <h2 className="text-2xl font-extrabold text-brown-800">Log in</h2>
+              <form className="flex flex-col items-center gap-4">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-60 h-10 px-3 border-3 bg-beige-100 border-brown-800 rounded shadow-[4px_4px_0px_black] font-semibold text-gray-800 placeholder-gray-500 focus:border-amber-100 outline-none"
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="w-60 h-10 px-3 border-3 bg-beige-100 border-brown-800 rounded shadow-[4px_4px_0px_black] font-semibold text-gray-800 placeholder-gray-500 focus:border-amber-100 outline-none"
+                />
+                <button className="w-32 h-10 border-3 border-brown-800 rounded shadow-[4px_4px_0px_black] font-semibold text-brown-800 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition">
+                  Let`s go!
+                </button>
+              </form>
             </div>
+
+            {/* Back (Signup) */}
+            <div className="absolute w-full h-full flex flex-col justify-center items-center gap-5 bg-beige-200 border-3 border-brown-800 rounded shadow-[4px_4px_0px_black] [transform:rotateY(180deg)] [backface-visibility:hidden]">
+              <h2 className="text-2xl font-extrabold text-brown-800">Sign up</h2>
+              <form className="flex flex-col items-center gap-4">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="w-60 h-10 px-3 border-3 bg-beige-100 border-brown-800 rounded shadow-[4px_4px_0px_black] font-semibold text-gray-800 placeholder-gray-500 focus:border-amber-100 outline-none"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-60 h-10 px-3 border-3 bg-beige-100 border-brown-800 rounded shadow-[4px_4px_0px_black] font-semibold text-gray-800 placeholder-gray-500 focus:border-amber-100 outline-none"
+                />
+                <button 
+                onClick={(e) => (e.preventDefault, handleRedirect)}
+                className="w-32 h-10 border-3 border-brown-800 rounded shadow-[4px_4px_0px_black] font-semibold text-gray-800 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition">
+                  Confirm!
+                </button>
+
+
+              </form>
+            </div>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
