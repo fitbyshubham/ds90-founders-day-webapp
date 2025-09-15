@@ -47,8 +47,8 @@ export default function LoginPage() {
 
 
   return(
-    <div className="min-h-screen flex items-center justify-center bg-neutral-900 px-4">
-      <div className="w-full max-w-sm bg-neutral-900 text-white">
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="w-full max-w-sm text-black">
 
         <img src="/OTP.svg" alt="OTP Illustration" className=" w-64 h-64 grid items-center mb-6" />
           <h2 className="text-2xl font-semibold mb-1">Please enter OTP ✨</h2>
@@ -67,14 +67,14 @@ export default function LoginPage() {
                 value={digit}
                 onChange={(e) => handleChange(e, index)}
                 onKeyDown={(e) => handleKeyDown(e, index)}
-                className="w-12 h-12 text-center text-lg font-semibold rounded-lg border border-neutral-600 bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-12 h-12 text-center text-lg font-semibold rounded-lg border-2 border-black/60 text-black focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
                 />
             ))}
           </div>
 
           <button 
           onClick={handleRoute}
-          className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 mt-6 rounded-lg font-semibold"
+          className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 mt-6 rounded-lg font-semibold text-white"
           >
             Verify
           </button>

@@ -9,10 +9,12 @@ import './login.css';
 export default function LoginPage() {
   const [mobile, setMobile] = useState("");
   const [name, setName] = useState("");
+
   const router = useRouter();
   const handleRoute = () => {
     router.push('/OTP');
   }
+
   const [showAlert, setShowAlert] = useState(false)
   const [alertType, setAlertType] = useState("Success")
   const [alertMessage, setAlertMessage] = useState("empty")
@@ -47,8 +49,8 @@ export default function LoginPage() {
   };
 
   return(
-    <div className="min-h-screen flex items-center justify-center bg-neutral-900 px-4">
-      <div className="w-full max-w-sm bg-neutral-900 text-white">
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="w-full max-w-sm text-black">
 
           <h2 className="text-2xl font-semibold mb-1">Log in to your account ✨</h2>
           <p className="text-sm text-neutral-400 mb-6">
@@ -65,7 +67,7 @@ export default function LoginPage() {
               <input
                 type="number"
                 placeholder="Enter your mobile number"
-                className="w-full p-3 pl-10 mb-4 rounded-lg bg-neutral-800 border-2 border-pink-500/30 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 pl-10 mb-4 rounded-lg border-2 border-black/60 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
                 value={mobile}
                 onChange={(e) => setMobile(e.target.value)}
               />
@@ -80,7 +82,7 @@ export default function LoginPage() {
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full p-3 pl-10 rounded-lg bg-neutral-800 border-2 border-pink-500/30 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 pl-10 rounded-lg border-2 border-black/60 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -88,8 +90,7 @@ export default function LoginPage() {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 mt-6 rounded-lg font-semibold"
-            >
+              className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 mt-6 rounded-lg font-semibold text-white">
               Log In
             </button>
           </form>
