@@ -4,7 +4,6 @@ import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import '../OTP/OTP.css';
 
-
 export default function LoginPage() {
   const router = useRouter();
   const handleRoute = () => {
@@ -45,40 +44,38 @@ export default function LoginPage() {
     }
   };
 
-
   return(
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-sm text-black">
+    <div className="min-h-screen flex items-center justify-center px-2 sm:px-4 bg-white">
+      <div className="w-full max-w-sm sm:max-w-md md:max-w-lg text-black bg-white rounded-xl shadow-lg p-4 sm:p-8">
 
-        <img src="/OTP.svg" alt="OTP Illustration" className=" w-64 h-64 grid items-center mb-6" />
-          <h2 className="text-2xl font-semibold mb-1">Please enter OTP ✨</h2>
-          <p className="text-sm text-neutral-400 mb-8">
-            Please enter the OTP sent to you on Whatsapp.
-          </p>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-1 text-center">Please enter OTP ✨</h2>
+        <p className="text-xs sm:text-sm text-neutral-400 mb-6 sm:mb-8 text-center">
+          Please enter the OTP sent to you on Whatsapp.
+        </p>
 
-          <div className="flex justify-center gap-3">
-            {otp.map((digit, index) => (
-                <input
-                key={index}
-                ref={(el) => { inputRefs.current[index] = el; }}
-                type="text"
-                inputMode="numeric"
-                maxLength={1}
-                value={digit}
-                onChange={(e) => handleChange(e, index)}
-                onKeyDown={(e) => handleKeyDown(e, index)}
-                className="w-12 h-12 text-center text-lg font-semibold rounded-lg border-2 border-black/60 text-black focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
-                />
-            ))}
-          </div>
-
-          <button 
-          onClick={handleRoute}
-          className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 mt-6 rounded-lg font-semibold text-white"
-          >
-            Verify
-          </button>
+        <div className="flex justify-center gap-2 sm:gap-3 mb-4">
+          {otp.map((digit, index) => (
+              <input
+              key={index}
+              ref={(el) => { inputRefs.current[index] = el; }}
+              type="text"
+              inputMode="numeric"
+              maxLength={1}
+              value={digit}
+              onChange={(e) => handleChange(e, index)}
+              onKeyDown={(e) => handleKeyDown(e, index)}
+              className="w-10 h-10 sm:w-12 sm:h-12 text-center text-lg font-semibold rounded-lg border-2 border-black/60 text-black focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
+              />
+          ))}
         </div>
+
+        <button 
+          onClick={handleRoute}
+          className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-2 sm:py-3 mt-4 sm:mt-6 rounded-lg font-semibold text-white text-base sm:text-lg"
+        >
+          Verify
+        </button>
       </div>
+    </div>
   )
 }

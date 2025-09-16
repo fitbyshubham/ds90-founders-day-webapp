@@ -49,54 +49,54 @@ export default function LoginPage() {
   };
 
   return(
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-sm text-black">
+    <div className="min-h-screen flex items-center justify-center px-2 sm:px-4 bg-white">
+      <div className="w-full max-w-sm sm:max-w-md md:max-w-lg text-black bg-white rounded-xl shadow-lg p-4 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-1 text-center">Log in to your account ✨</h2>
+        <p className="text-xs sm:text-sm text-neutral-400 mb-6 text-center">
+          Welcome back! Please enter your details.
+        </p>
 
-          <h2 className="text-2xl font-semibold mb-1">Log in to your account ✨</h2>
-          <p className="text-sm text-neutral-400 mb-6">
-            Welcome back! Please enter your details.
-          </p>
+        <form onSubmit={handleSubmit}>
+          <label className="block text-sm mb-2">Mobile Number</label>
+          <div className="relative">
+            <Phone
+              size={16}
+              className="absolute left-3 top-4 text-neutral-400"
+            />
+            <input
+              type="number"
+              placeholder="Enter your mobile number"
+              className="w-full p-3 pl-10 mb-4 rounded-lg border-2 border-black/60 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+            />
+          </div>
 
-          <form onSubmit={handleSubmit}>
-            <label className="block text-sm mb-2">Mobile Number</label>
-            <div className="relative">
-              <Phone
-                size={16}
-                className="absolute left-3 top-4 text-neutral-400"
-              />
-              <input
-                type="number"
-                placeholder="Enter your mobile number"
-                className="w-full p-3 pl-10 mb-4 rounded-lg border-2 border-black/60 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-              />
-            </div>
+          <label className="block text-sm mb-2">Name</label>
+          <div className="relative mb-2">
+            <Contact
+              size={16}
+              className="absolute left-3 top-4 text-neutral-400"
+            />
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full p-3 pl-10 rounded-lg border-2 border-black/60 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
 
-            <label className="block text-sm mb-2">Name</label>
-            <div className="relative mb-2">
-              <Contact
-                size={16}
-                className="absolute left-3 top-4 text-neutral-400"
-              />
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full p-3 pl-10 rounded-lg border-2 border-black/60 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-2 sm:py-3 mt-4 sm:mt-6 rounded-lg font-semibold text-white text-base sm:text-lg"
+          >
+            Log In
+          </button>
+        </form>
 
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-3 mt-6 rounded-lg font-semibold text-white">
-              Log In
-            </button>
-          </form>
-
-          {showAlert && <Alert type={alertType === "Success" ? "success" : "danger"} text={alertMessage} />}
-        </div>
+        {showAlert && <Alert type={alertType === "Success" ? "success" : "danger"} text={alertMessage} />}
       </div>
+    </div>
   )
 }
