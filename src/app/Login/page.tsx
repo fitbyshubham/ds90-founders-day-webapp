@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from 'react';
-import { Contact, Phone } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Alert from '../Components/Alert';
 import './login.css';
@@ -9,8 +8,9 @@ import './login.css';
 export default function LoginPage() {
   const [mobile, setMobile] = useState("");
   const [name, setName] = useState("");
-
+  const [countryCode, setCountryCode] = useState("+91");
   const router = useRouter();
+
   const handleRoute = () => {
     router.push('/OTP');
   }
@@ -48,55 +48,68 @@ export default function LoginPage() {
     handleRoute();
   };
 
-  return(
-    <div className="min-h-screen flex items-center justify-center px-2 sm:px-4 bg-white">
-      <div className="w-full max-w-sm sm:max-w-md md:max-w-lg text-black bg-white rounded-xl shadow-lg p-4 sm:p-8">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-1 text-center">Log in to your account ✨</h2>
-        <p className="text-xs sm:text-sm text-neutral-400 mb-6 text-center">
-          Welcome back! Please enter your details.
-        </p>
+  return (
+    <div className="min-h-screen flex flex-col justify-end bg-black relative overflow-hidden px-0">
+      {/* Video Section */}
+      <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end z-0">
+        <video
+          src="/Videos/loginOTP.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      </div>
 
+      {/* Login Card */}
+      <div className="relative w-full max-w-md bg-white rounded-t-4xl shadow-lg px-6 pt-8 pb-6 z-10 mx-auto">
         <form onSubmit={handleSubmit}>
-          <label className="block text-sm mb-2">Mobile Number</label>
-          <div className="relative">
-            <Phone
-              size={16}
-              className="absolute left-3 top-4 text-neutral-400"
-            />
+          <div className="text-center z-10">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-2">Let's get you <br /> signed in!</h1>
+            <p className="text-xs sm:text-sm text-neutral-400 mb-6 sm:mb-8 text-center">
+              Enter your details below.
+            </p>
+          </div>
+          <div className="mb-4 flex flex-row gap-2">
+            <div className="flex items-center border border-neutral-300 rounded-lg bg-white px-3 py-2 min-w-[90px]">
+              <select
+                value={countryCode}
+                onChange={(e) => setCountryCode(e.target.value)}
+                className="bg-transparent text-base outline-none w-10 cursor-not-allowed text-neutral-400"
+                style={{ appearance: 'none', WebkitAppearance: 'none' }}
+                disabled
+              >
+                <option value="+91">+91</option>
+              </select>
+              <span className="ml-1 text-neutral-400 text-xs">▼</span>
+            </div>
             <input
               type="number"
-              placeholder="Enter your mobile number"
-              className="w-full p-3 pl-10 mb-4 rounded-lg border-2 border-black/60 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
+              placeholder="Phone Number"
+              className="flex-1 p-3 rounded-lg border border-neutral-300 text-base focus:outline-none focus:ring-2 focus:ring-black"
               value={mobile}
               onChange={(e) => setMobile(e.target.value)}
             />
           </div>
-
-          <label className="block text-sm mb-2">Name</label>
-          <div className="relative mb-2">
-            <Contact
-              size={16}
-              className="absolute left-3 top-4 text-neutral-400"
-            />
+          <div className="mb-4">
             <input
               type="text"
-              placeholder="Name"
-              className="w-full p-3 pl-10 rounded-lg border-2 border-black/60 text-sm focus:outline-none focus:border-0 focus:ring-2 focus:ring-black"
+              placeholder="Full Name"
+              className="w-full p-3 rounded-lg border border-neutral-300 text-base focus:outline-none focus:ring-2 focus:ring-black"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-pink-500 to-purple-500 py-2 sm:py-3 mt-4 sm:mt-6 rounded-lg font-semibold text-white text-base sm:text-lg"
+            className="w-full bg-black py-3 rounded-lg font-semibold text-white text-lg"
           >
-            Log In
+            Sign In
           </button>
         </form>
-
         {showAlert && <Alert type={alertType === "Success" ? "success" : "danger"} text={alertMessage} />}
       </div>
     </div>
-  )
+  );
 }

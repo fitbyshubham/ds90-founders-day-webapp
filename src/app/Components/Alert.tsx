@@ -20,7 +20,7 @@ const Alert = ({ type, text }: AlertProps) => {
         exit="exit"
         variants={alertVariant}
         transition={{duration: 0.3, ease: "easeInOut"}}
-        className="fixed z-50 flex items-center justify-center bottom-5 right-5 ">
+        className="fixed z-50 flex items-center justify-center top-5 right-5 ">
             <div className={`p-2 ${type === "danger" ? "bg-red-800" : "bg-royal"} items-center text-indigo-100 leading-none 
             lg:rounded-full flex lg:inline-flex rounded-md p-5`}>
                 <p className={`flex rounded-full ${type === "danger" ? "bg-red-500" : "bg-lavender" } 
