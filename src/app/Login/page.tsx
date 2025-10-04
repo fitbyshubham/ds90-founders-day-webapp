@@ -33,7 +33,7 @@ export default function LoginPage() {
   const [showAlert, setShowAlert] = useState(false)
   const [alertType, setAlertType] = useState("Success")
   const [alertMessage, setAlertMessage] = useState("empty")
-  const showAlertMessage = (type, message) => {
+  const showAlertMessage = (type: string, message: string) => {
     setAlertType(type)
     setAlertMessage(message)
     setShowAlert(true)
@@ -41,7 +41,7 @@ export default function LoginPage() {
         setShowAlert(false)
     }, 5000);
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!mobile.trim()) {
       showAlertMessage("Error", "Mobile number is required");
@@ -92,7 +92,7 @@ export default function LoginPage() {
       {/* Welcome Text */}
       <div className="absolute top-3 left-1/2 transform -translate-x-1/2 z-10 w-full flex flex-col items-center">
         <span className="text-white bg-black/30 px-4 py-2 text-4xl font-bold rounded mb-2 shadow-lg">
-          Welcome To<br />Chanbagh 90!
+          Welcome To<br />Chandbagh 90!
         </span>
         <span className="text-white bg-black/30 px-3 py-1 text-lg font-semibold rounded shadow">
           An app made by the students

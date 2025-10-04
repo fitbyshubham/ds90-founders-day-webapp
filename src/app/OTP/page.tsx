@@ -1,8 +1,23 @@
 "use client"
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import '../OTP/OTP.css';
+
+const images = [
+  {
+    image: "https://plus.unsplash.com/premium_photo-1727552116095-889cb485a803?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3JvdXAlMjBzZWxmaWV8ZW58MHx8MHx8fDA%3D",
+    imageNo: "1"
+  },
+  {
+    image: "https://media.istockphoto.com/id/1479798765/photo/vertical-group-of-happy-friends-posing-for-a-selfie-on-a-spring-day-as-they-party-together.jpg?s=612x612&w=0&k=20&c=3ch9k6zg71DfVtWzf1Q-TgJXPeQyoflY7fCpiPLmoZs=",
+    imageNo: "2"
+  },
+  {
+    image: "https://c8.alamy.com/comp/EC1E47/indian-group-friends-park-enjoy-EC1E47.jpg",
+    imageNo: "3"
+  },
+];
 
 export default function LoginPage() {
   const router = useRouter();
@@ -44,18 +59,39 @@ export default function LoginPage() {
     }
   };
 
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((c) => (c + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return(
     <div className="min-h-screen flex flex-col justify-end bg-black relative overflow-hidden px-0">
-      {/* Video Section */}
-      <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-end z-0">
-        <video
-          src="/Videos/loginOTP.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover mb-32"
-        />
+            {/* Fullscreen Background Image */}
+      <div
+        className="fixed top-0 left-0 w-full h-full -z-10 transition-opacity duration-1000"
+        style={{
+          backgroundImage: `url('${images[current].image}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          transition: "background-image 1s ease-in-out"
+        }}
+        aria-hidden="true"
+      />
+      {/* Overlay for contrast (optional) */}
+      <div className="fixed top-0 left-0 w-full h-full bg-black/30 -z-10" aria-hidden="true" />
+
+      {/* Welcome Text */}
+      <div className="absolute top-3 left-1/2 transform -translate-x-1/2 z-10 w-full flex flex-col items-center">
+        <span className="text-white bg-black/30 px-4 py-2 text-4xl font-bold rounded mb-2 shadow-lg">
+          Welcome To<br />Chandbagh 90!
+        </span>
+        <span className="text-white bg-black/30 px-3 py-1 text-lg font-semibold rounded shadow">
+          An app made by the students
+        </span>
       </div>
 
       {/* OTP Card */}
