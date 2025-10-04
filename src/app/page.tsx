@@ -1,3 +1,4 @@
+
 import Info from'./infopage'
 export default function Home() {
   return (
