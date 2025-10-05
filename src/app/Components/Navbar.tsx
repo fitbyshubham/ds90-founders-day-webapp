@@ -1,9 +1,10 @@
 "use client";
-import { Home, Bell, User, ClipboardClock, CookingPot } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { Home, Info, User, ClipboardClock, CookingPot } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleHomeClick = () => {
     router.push("/Home");
@@ -17,6 +18,13 @@ export default function Navbar() {
   const handleProfileClick = () => {
     router.push("/Profile");
   };
+  const handleInfoClick = () => {
+    router.push("/InfoPage");
+  };
+
+  const hideNavbarRoutes = ["/Login", "/OTP", "/Cart"];
+  const shouldHideNavbar = hideNavbarRoutes.includes(pathname);
+  if (shouldHideNavbar) return null;
 
   return (
     <div className="fixed bottom-0 left-0 w-full flex justify-center items-end z-50 pointer-events-none">
@@ -28,6 +36,9 @@ export default function Navbar() {
           >
             <span className="bg-green-500 rounded-full w-10 h-10 flex items-center justify-center">
               <CookingPot className="text-black w-6 h-6" />
+              <span className="absolute -bottom-6 text-sm font-semibold text-white/80">
+                Order
+              </span>
             </span>
           </button>
         </div>
@@ -42,11 +53,10 @@ export default function Navbar() {
           </button>
 
           <div className="w-16" />
-          <button>
-
-            <NavItem icon={<Bell size={28} />} label="Notification" />
+          <button onClick={handleInfoClick}>
+            <NavItem icon={<Info size={28} />} label="About" />
           </button>
-          
+
           <button onClick={handleProfileClick}>
             <NavItem icon={<User size={28} />} label="Profile" />
           </button>
@@ -66,13 +76,7 @@ function NavItem({ icon, label, active }: NavItemProps) {
   return (
     <div className="flex flex-col items-center flex-1">
       <span className="text-white">{icon}</span>
-      <span
-        className={`mt-1 text-sm font-semibold ${
-          active ? "text-green-500" : "text-white/80"
-        }`}
-      >
-        {label}
-      </span>
+      <span className="mt-1 text-sm font-semibold text-white/80">{label}</span>
     </div>
   );
 }
