@@ -48,29 +48,16 @@ export default function Schedule() {
                     "./Avatars/m3.jpg",
                   ]}
                 />
-                <ScheduleCard
-                  day="THU"
-                  date="16"
-                  eventName="Parents and Old Boys Enter"
-                  desc="Parents and OldBoys are allowed to enter the school"
-                  location="Main Gate"
-                  startTime="10:00"
-                  endTime="19:50"
-                  numberOfPeople={122}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
+               
                 <ScheduleCard
                   day="THU"
                   date="16"
                   eventName="Exhibitions"
                   desc="Exhibitions by all the Departements of School"
-                  location="Main Building Classrooms, Science Block, Art School and Music School"
+                  location="Various Locations"
                   startTime="10:30"
                   endTime="13:30"
+                  coverImage="./Photos/founder-science-exhibition.jpg"
                   numberOfPeople={135}
                   avatars={[
                     "./Avatars/m1.jpg",

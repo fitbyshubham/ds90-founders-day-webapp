@@ -45,10 +45,10 @@ export default function ScheduleCard({
   };
 
   return (
-    <div className="relative rounded-tl-[40px] rounded-tr-[36px] rounded-b-[36px] bg-blue-500 w-[350px] shadow-xl overflow-hidden pb-0 pt-0 px-0">
+    <div className="relative shadow-xl rounded-tl-[40px] rounded-tr-[36px] rounded-b-[36px] bg-blue-800 w-[350px] overflow-hidden pb-0 pt-0 px-0">
       {/* Date badge */}
       <div
-        className="absolute left-0 top-0 z-20 flex flex-col items-center bg-white rounded-tl-[40px] rounded-br-[18px] px-4 pt-3 pb-2 shadow"
+        className="absolute shadow-xl left-0 top-0 z-20 flex flex-col items-center bg-white rounded-tl-[40px] rounded-br-[18px] px-4 pt-3 pb-2 mr-2 mb-2 "
         style={{ minWidth: 74 }}
       >
         <span className="font-bold text-lg text-black leading-tight">
@@ -65,18 +65,18 @@ export default function ScheduleCard({
       )}
 
       {/* Main content */}
-      <div className="flex flex-col px-6 pt-7 pb-0 relative">
+      <div className=" drop-shadow-lg flex flex-col px-6 pt-7 pb-0 relative">
         {eventName && (
-          <span className="flex flex-col items-end font-bold text-white text-lg mb-4 mt-1 leading-tight truncate">
+          <span className="drop-shadow-lg flex flex-col items-end font-bold text-white text-3xl mb-4 mt-1 leading-tight truncate">
             {eventName}
           </span>
         )}
-        <h2 className="text-white/80 text-sm font-semibold mb-1">{desc}</h2>
-        <div className="flex flex-row justify-between items-center text-white/90 text-sm mb-1">
-          <span className="font-medium">
+        <h2 className="text-white/80 drop-shadow-lg text-sm font-semibold mb-1"></h2>
+        <div className=" drop-shadow-lg flex flex-row justify-between items-center text-white/90 text-sm mb-1">
+          <span className="font-bold">
             {startTime} to {endTime}
           </span>
-          <span className="font-medium">{location}</span>
+          <span className="font-bold">{location}</span>
         </div>
         {/* Avatars + join capsule */}
         <div className="flex items-center justify-between bg-white rounded-full shadow mt-3 py-2 px-3">
@@ -86,7 +86,7 @@ export default function ScheduleCard({
                 key={i}
                 src={src}
                 alt={`Person ${i + 1}`}
-                className="w-7 h-7 rounded-full border-2 border-white bg-gray-200 object-cover"
+                className="w-7 h-7  border-0 border-white bg-gray-200 object-cover"
                 style={{ zIndex: 10 - i }}
               />
             ))}
@@ -96,7 +96,7 @@ export default function ScheduleCard({
           </span>
           <button
             onClick={handleJoin}
-            className="ml-auto px-3 py-1 rounded-full bg-white text-green-600 font-semibold text-sm hover:bg-green-50 border border-green-100 transition"
+            className="ml-auto px-3 py-1 rounded-full bg-white text-green-600 font-semibold text-sm hover:bg-green-50  border-green-100 transition"
             style={{ minWidth: 85 }}
           >
             {attending ? "Leave" : "Join Event"}
@@ -105,7 +105,7 @@ export default function ScheduleCard({
       </div>
 
       {/* Event Image */}
-      <div className="w-full mt-1 px-4 py-4">
+      <div className="w-full mt-1 px-4 py-4 drop-shadow-lg">
         <img
           src={coverImage}
           alt="Event"
