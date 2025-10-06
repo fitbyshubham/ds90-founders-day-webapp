@@ -28,7 +28,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
   <div>
-    <div className="bg-gradient-to-r from-purple-600 to-pink-500 text-white p-6 rounded-b-3xl shadow-lg">
+    <div className="bg-black text-white p-6 rounded-b-3xl shadow-lg">
         <h1 className="text-2xl font-bold">Schedule</h1>
     </div> 
   </div>

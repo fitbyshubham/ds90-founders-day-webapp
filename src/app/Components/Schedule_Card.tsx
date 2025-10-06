@@ -1,22 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin } from "lucide-react";
 import AnimatedNumber from "./Animations";
 
 interface ScheduleCardProps {
-  day: string;         
-  date: string;       
-  desc: string;    
+  day: string;
+  date: string;
+  desc: string;
   online?: boolean;
   eventName: string;
   startTime: string;
-  endTime: string;        
-  avatars: string[];  
+  endTime: string;
+  avatars: string[];
   numberOfPeople: number;
-  peopleLabel?: string; 
+  peopleLabel?: string;
   coverImage: string;
-  location: string; 
+  location: string;
 }
 
 export default function ScheduleCard({
@@ -27,9 +26,8 @@ export default function ScheduleCard({
   eventName,
   startTime,
   endTime,
-  avatars,
+  avatars = [],
   numberOfPeople,
-  peopleLabel = "participants",
   coverImage,
   location,
 }: ScheduleCardProps) {
@@ -47,31 +45,40 @@ export default function ScheduleCard({
   };
 
   return (
-    <div className="w-full max-w-[360px] bg-[#F87C4A] rounded-[36px] relative shadow-xl overflow-hidden">
-      {/* Date box */}
-      <div className="absolute left-0 top-0 m-0 translate-y-[-8px] translate-x-[-8px] rounded-2xl bg-white text-[#D9414A] flex flex-col items-center px-3 py-2 z-10 shadow-md border border-[#F87C4A]">
-        <span className="font-extrabold text-lg leading-tight">{day}</span>
-        <span className="font-semibold text-base -mt-1">{date}</span>
+    <div className="relative rounded-tl-[40px] rounded-tr-[36px] rounded-b-[36px] bg-blue-500 w-[350px] shadow-xl overflow-hidden pb-0 pt-0 px-0">
+      {/* Date badge */}
+      <div
+        className="absolute left-0 top-0 z-20 flex flex-col items-center bg-white rounded-tl-[40px] rounded-br-[18px] px-4 pt-3 pb-2 shadow"
+        style={{ minWidth: 74 }}
+      >
+        <span className="font-bold text-lg text-black leading-tight">
+          {day}
+        </span>
+        <span className="font-semibold text-base text-black -mt-1">{date}</span>
       </div>
-      {/* Main card content */}
-      <div className="pt-6 pb-0 px-5">
-        <div className="flex justify-between items-center mt-2">
-          <div className="flex flex-col">
-            <span className="font-bold text-white text-[1.15rem] truncate">{eventName}</span>
-          </div>
-          {online && (
-            <div className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-full bg-green-500 mr-1" />
-              <span className="text-xs text-white/80">Online</span>
-            </div>
-          )}
+      {/* Online status */}
+      {online && (
+        <div className="absolute right-5 top-3 flex items-center space-x-1 z-10">
+          <span className="w-2 h-2 rounded-full bg-green-500" />
+          <span className="text-xs text-white/80 font-medium">Online</span>
         </div>
-        <div className="mt-1">
-          <h2 className="text-white/90 text-[13px] font-medium">{desc}</h2>
-          <span className="block text-xs text-white/80 font-medium mt-1">{startTime} To {endTime}</span>
-          <span className="block text-xs text-white/80 font-medium mt-1">{location}</span>
+      )}
+
+      {/* Main content */}
+      <div className="flex flex-col px-6 pt-7 pb-0 relative">
+        {eventName && (
+          <span className="flex flex-col items-end font-bold text-white text-lg mb-4 mt-1 leading-tight truncate">
+            {eventName}
+          </span>
+        )}
+        <h2 className="text-white/80 text-sm font-semibold mb-1">{desc}</h2>
+        <div className="flex flex-row justify-between items-center text-white/90 text-sm mb-1">
+          <span className="font-medium">
+            {startTime} to {endTime}
+          </span>
+          <span className="font-medium">{location}</span>
         </div>
-        {/* Avatars and Join Event capsule */}
+        {/* Avatars + join capsule */}
         <div className="flex items-center justify-between bg-white rounded-full shadow mt-3 py-2 px-3">
           <div className="flex items-center -space-x-3">
             {avatars.slice(0, 5).map((src, i) => (
@@ -85,7 +92,7 @@ export default function ScheduleCard({
             ))}
           </div>
           <span className="text-xs font-semibold text-[#D9414A] ml-2 mr-2">
-            + <AnimatedNumber value={attendees} /> {peopleLabel}
+            + <AnimatedNumber value={attendees} /> Attending
           </span>
           <button
             onClick={handleJoin}
@@ -96,12 +103,13 @@ export default function ScheduleCard({
           </button>
         </div>
       </div>
-      {/* Event image */}
-      <div className="w-full mt-3">
+
+      {/* Event Image */}
+      <div className="w-full mt-1 px-4 py-4">
         <img
           src={coverImage}
           alt="Event"
-          className="w-full h-40 object-cover rounded-b-[36px]"
+          className="w-full h-[170px] object-cover rounded-[36px]"
         />
       </div>
     </div>
