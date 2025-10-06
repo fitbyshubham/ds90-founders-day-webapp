@@ -56,7 +56,7 @@ const team = [
     img: "/Portraits/Hemant.jpg",
   },
   {
-    name: "Vibhor Saraowgi",
+    name: "Vibhor Saraogi",
     role: "Developer",
     img: "/Portraits/",
   },
