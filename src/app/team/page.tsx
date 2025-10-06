@@ -8,7 +8,7 @@ const team = [
   { name: "Hemant Khandelwal", role: "Lead Developer", img: "/Portraits/Hemant.jpg" },
   { name: "Vibhor Saraogi", role: "Developer", img: "/Portraits/Vibhor.jpg" },
   { name: "Ojas Tripathi", role: "Developer", img: "/Portraits/Ojas.jpg" },
-  { name: "Aarav Anand", role: "Developer", img: "/Portraits/Aarav.jpg" }, // 👈 new member
+  { name: "Aarav Anand", role: "Developer", img: "/Portraits/Aarav.jpg" }, 
 ];
 
 const containerVariants: Variants = {
