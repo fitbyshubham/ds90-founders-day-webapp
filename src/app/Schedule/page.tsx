@@ -8,7 +8,7 @@ export default function Schedule() {
 
   return (
     <div>
-      <div className="w-full p-4">
+      <div className="w-full p-6 pb-34">
         <div className="mb-6">
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Select Day

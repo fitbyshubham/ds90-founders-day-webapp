@@ -435,20 +435,6 @@ const locations = [
       </>
     ),
   },
-  {
-    image: "/Photos/",
-    name: "General Store",
-    aspect: 1.7 / 1,
-    description: (
-      <>
-        The Kilachand Library, with over{" "}
-        <strong>30,000 books and digital resources</strong>, is The Doon
-        School’s intellectual hub. It offers ample space for reading, research,
-        and IT access .It blends tradition, technology and also houses the
-        Founders’ Room and Archives, preserving the school’s rich history.
-      </>
-    ),
-  },
     {
     image: "/Photos/",
     name: "Guru's Lawns",
@@ -468,103 +454,6 @@ const locations = [
         <strong>Assistant House Master:</strong> Mr. Harshal Gunwant (HGT)
         <br />
         <strong>Dame:</strong> Meenakshi Tripathi
-      </>
-    ),
-  },
-  {
-    image: "/Photos/",
-    name: "Headmaster's Gardens",
-    aspect: 1 / 1.2,
-    description: (
-      <>
-        Kashmir House, established in 1937 as Gibson House, is one of the oldest
-        and most distinguished houses at The Doon School. In 1938, the house was
-        renamed Kashmir House following a generous donation from Maharaja Hari
-        Singh of Kashmir for its construction. Situated next to Hyderabad House
-        along one flank of the Main Field, it boasts a rich history and a legacy
-        of producing some of the most accomplished Doscos.
-        <br />
-        <strong>Housemaster:</strong> Mr. Manish Kant Pant (M.Sc., B.Ed.)
-        <br />
-        <strong>Assistant Housemaster:</strong> Mr. Satya Shrava Sharma
-        <br />
-        <strong>Dame:</strong> Ms. Ria Chakraborty
-        <br />
-        Kashmir House is renowned for its discipline, camaraderie, and a strong
-        sense of tradition. The house's emblem, the chinar leaf, symbolizes
-        resilience and the rich cultural heritage of Kashmir. Known as the
-        "House of Gentlemen," it has consistently upheld high standards in
-        academics, sports, and co-curricular activities.
-        <br />
-        <strong>Fun Fact:</strong> In 2003, the two separate entities, Kashmir-A
-        and Kashmir-B, were unified to form a single cohesive unit,
-        strengthening the house's community spirit.
-      </>
-    ),
-  },
-  {
-    image: "/Photos/",
-    name: "Headmaster's Residence",
-    aspect: 1.7 / 2,
-    description: (
-      <>
-        Established in 1936 as Thomas House, Jaipur House is one of the oldest
-        and most distinguished houses at The Doon School. In 1937, the house
-        moved into its current building, and 49 boys were inducted under the
-        leadership of the first Housemaster, Mr. C.L. Howell-Thomas. The house
-        was later renamed Jaipur House, reflecting its deep connection with the
-        royal family of Jaipur, who were significant patrons of the school The
-        Doon School.
-        <br />
-        The house is renowned for its strong traditions and has produced many
-        notable alumni. The first Housemaster was Mr. C.L. Howell-Thomas. The
-        house is named after the Maharaja of Jaipur, who made a significant
-        donation to the school, symbolizing the strong ties between the house
-        and the royal family.
-        <br />
-        Housemaster: Mr. Pratyush Vaishnava
-        <br />
-        Assistant Housemaster: Mr. Parvinder Kumar
-        <br />
-        Dame: Ms. Durgesh Kumari
-        <br />
-        Jaipur House is known for its rich traditions, strong academic
-        performance, and active participation in various school activities. The
-        house's emblem, featuring an eagle, symbolizes strength, vision, and
-        leadership.
-        <br />
-        Fun Fact: The house is named after the Maharaja of Jaipur, who made a
-        significant donation to the school, symbolizing the strong ties between
-        the house and the royal family.
-      </>
-    ),
-  },
-  {
-    image: "/Photos/",
-    name: "MFL Block",
-    aspect: 1.4 / 1.6,
-    description: (
-      <>
-        Tata House is one of the oldest and most respected houses at Doon. Its
-        motto, “True as Steel,” reflects its spirit. Living here feels like
-        being part of a close-knit family where everyone supports one another
-        while also pushing you to do your best. The house has a strong
-        reputation for discipline, hard work, and loyalty. Seniors guide juniors
-        patiently. Life in Tata combines study, sport, and fun. In the mornings,
-        the house buzzes with energy as everyone prepares for classes. In the
-        evenings, the common room fills with laughter, debates, and stories.
-        Tata boys are competitive in sports, debates, and cultural events, but
-        they also celebrate each other’s successes. The house has its
-        traditions, including special dinners, house songs, and late-night
-        discussions, which foster a sense of belonging. Living here teaches
-        responsibility, teamwork, and lifelong friendships, making Tata not just
-        a house but a home for all.
-        <br />
-        <strong>House Master:</strong> Mr. Ashish Dean (ADN)
-        <br />
-        <strong>Assistant House Master:</strong> Ms. Mughda Pandey (MPY)
-        <br />
-        <strong>Dame:</strong> Ruthann Rozario
       </>
     ),
   },

@@ -36,7 +36,7 @@ export default function StallsCardPage(){
       
 
     return(
-        <div className="w-full h-full mx-auto bg-white rounded-3xl shadow-lg p-4 relative font-sans">
+        <div className="w-full h-full mx-auto bg-white rounded-3xl shadow-lg p-4 relative font-sans pb-32">
             {/* Top Search Bar */}
             <div className="flex items-center gap-2 mb-4">
                 <input

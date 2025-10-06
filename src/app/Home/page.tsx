@@ -8,9 +8,9 @@ const specials = [
     name: "Paneer Tikka Sandwich",
     price: "₹50",
     image:
-      "https://images.unsplash.com/photo-1516684669134-de6f27e8d6b6?auto=format&fit=crop&w=400&q=80",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIB0-zFdFEGoh5VnYpk5WqWVZh88m5YjlNUQ&s",
     rating: 4.8,
-    stall: "Stall 5 - The Grill House",
+    stall: "Stall No. 5",
     isTop: true,
   },
   {
@@ -19,7 +19,7 @@ const specials = [
     image:
       "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
     rating: 4.6,
-    stall: "Stall 2 - Quick Bites",
+    stall: "Stall No. 2",
     isTop: false,
   },
 ];
@@ -175,7 +175,7 @@ export default function HomePage() {
       </div>
 
       {/* Team Section */}
-      <section className="px-4 mt-8 mb-32">
+      <section className="px-4 mt-8 pb-32">
         <h2 className="font-bold text-lg mb-4 text-gray-800 text-center">
           Meet the Team
         </h2>
