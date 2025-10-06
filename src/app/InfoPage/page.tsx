@@ -273,7 +273,7 @@ const locations = [
     ),
   },
   {
-    image: "/Photos/RB.jpeg",
+    image: "/Photos/rb.jpeg",
     name: "Rose Bowl",
     aspect: 1 / 1,
     description: (
@@ -346,7 +346,7 @@ const locations = [
     ),
   },
   {
-    image: "/Photos/Pavilion.jpg",
+    image: "/Photos/pv.jpeg",
     name: "Pavilion",
     aspect: 1.7 / 2,
     description: (
@@ -525,7 +525,7 @@ const locations = [
     ),
   },
   {
-    image: "/Photos/",
+    image: "/Photos/wc.jpg",
     name: "Wellness Center",
     aspect: 1.5 / 1.9,
     description: (
