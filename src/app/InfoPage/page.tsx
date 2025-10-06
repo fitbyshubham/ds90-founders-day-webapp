@@ -554,9 +554,9 @@ export default function InfoPage() {
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
   return (
-    <div className="w-full max-w-xs mx-auto bg-white rounded-3xl pb-34">
-      <div className="text-lg font-bold px-2 mb-3 mt-3">Explore the School</div>
-      <div className="relative mb-4 px-2">
+    <div className="w-full px-2 sm:px-4 max-w-3xl mx-auto bg-white rounded-3xl pb-10">
+      <div className="text-3xl font-bold mb-3 mt-6">Explore the School</div>
+      <div className="relative mb-4 ">
         <input
           className="w-full rounded-xl border border-gray-200 px-3 py-2 pr-10 outline-none bg-gray-50"
           placeholder="Search any place. . ."
@@ -595,7 +595,7 @@ export default function InfoPage() {
               <p className="mb-6 text-gray-700">{selectedImage.description}</p>
               <button
                 onClick={() => setSelectedImage(null)}
-                className="mt-2 px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700"
+                className="mt-2 px-0 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700"
               >
                 ← Back to Houses
               </button>
@@ -608,7 +608,7 @@ export default function InfoPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="w-full max-w-xs mx-auto bg-white"
+            className="w-full bg-white"
           >
             <div className="columns-2 gap-3">
               {locations.map((loc) => (
