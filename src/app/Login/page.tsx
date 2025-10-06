@@ -73,7 +73,7 @@ export default function LoginPage() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col justify-end relative overflow-hidden px-0">
+    <div className="min-h-screen flex flex-col justify-end fixed overflow-hidden px-0">
       {/* Fullscreen Background Image */}
       <div
         className="fixed top-0 left-0 w-full h-full -z-10 transition-opacity duration-1000"
@@ -90,7 +90,7 @@ export default function LoginPage() {
       <div className="fixed top-0 left-0 w-full h-full bg-black/30 -z-10" aria-hidden="true" />
 
       {/* Welcome Text */}
-      <div className="absolute top-3 left-1/2 transform -translate-x-1/2 z-10 w-full flex flex-col items-center">
+      <div className="fixed top-3 left-1/2 transform -translate-x-1/2 z-10 w-full flex flex-col items-center">
         <span className="text-white bg-black/30 px-4 py-2 text-4xl font-bold rounded mb-2 shadow-lg">
           Welcome To<br />Chandbagh 90!
         </span>
@@ -100,7 +100,7 @@ export default function LoginPage() {
       </div>
 
       {/* Login Card */}
-      <div className="relative w-full max-w-md bg-white rounded-t-4xl shadow-lg px-6 pt-8 pb-6 z-10 mx-auto mt-auto">
+      <div className="fixed w-full max-w-md bg-white rounded-t-4xl shadow-lg px-6 pt-8 pb-6 z-10 mx-auto mt-auto">
         <form onSubmit={handleSubmit}>
           <div className="text-center z-10">
             <h1 className="text-3xl sm:text-4xl font-bold mb-2">Let's get you <br /> signed in!</h1>
