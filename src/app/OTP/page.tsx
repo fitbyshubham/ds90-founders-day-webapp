@@ -85,8 +85,8 @@ export default function LoginPage() {
       <div className="fixed top-0 left-0 w-full h-full bg-black/30 -z-10" aria-hidden="true" />
 
       {/* Welcome Text */}
-      <div className="fixed top-3 left-1/2 transform -translate-x-1/2 z-10 w-full flex flex-col items-center">
-        <span className="text-white bg-black/30 px-4 py-2 text-4xl font-bold rounded mb-2 shadow-lg">
+      <div className="fixed top-3 left-1/2 transform -translate-x-1/2 z-10 w-full flex flex-col items-center align-items-center justify-center">
+        <span className="text-white bg-black/30 px-4 py-2 text-4xl font-bold rounded mb-2 shadow-lg flex items-center justify-center ">
           Welcome To<br />Chandbagh 90!
         </span>
         <span className="text-white bg-black/30 px-3 py-1 text-lg font-semibold rounded shadow">
