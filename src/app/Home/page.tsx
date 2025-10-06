@@ -80,7 +80,7 @@ export default function HomePage() {
       <div className="bg-gray-900 text-white px-4 pb-6 pt-8 rounded-b-3xl shadow flex flex-col relative">
         <div className="flex mb-4">
           <div className="flex items-left space-x-1.5 flex-col">
-            <span className="text-2xl"> Welcome</span>
+            <span className="text-2xl"> Welcome,</span>
             <span className="font-bold text-3xl">Samarth Pundeer!</span>
           </div>
         </div>
