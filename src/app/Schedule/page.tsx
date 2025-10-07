@@ -2,35 +2,35 @@
 
 import { useState } from "react";
 import ScheduleCard from "../Components/Schedule_Card";
+import CalenderCard from "../Components/CalenderCard";
 
 export default function Schedule() {
-  const [selectedDay, setSelectedDay] = useState<"Day 1" | "Day 2" | "Day 3">(
-    "Day 1"
+  const [selectedDay, setSelectedDay] = useState<"OCT 16" | "OCT 17" | "OCT 18">(
+    "OCT 16"
   );
 
   return (
     <div>
-      <div className="w-full p-6 pb-20">
-        <div className="mb-6">
+     <div className="w-full p-6 pb-10">
+        <div className="mb-6 flex flex-col items-center justify-center space-y-4">
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Select Day
+
           </label>
-          <select
-            value={selectedDay}
-            onChange={(e) =>
-              setSelectedDay(e.target.value as "Day 1" | "Day 2" | "Day 3")
-            }
-            className="w-full border border-gray-300 rounded-xl p-3 bg-white shadow-sm focus:ring-2 focus:ring-pink-400 focus:outline-none"
-          >
-            <option>Day 1</option>
-            <option>Day 2</option>
-            <option>Day 3</option>
-          </select>
+          <div>
+            <CalenderCard
+              selectedDay={selectedDay}
+              onSelectDay={(day: "OCT 16" | "OCT 17" | "OCT 18") => setSelectedDay(day)}
+            />
+          </div>
         </div>
+        <div className="flex flex-col items-center justify-center space-y-6">
+          {/* ...existing ScheduleCard rendering logic... */}
+      
+      </div>
 
         <div className="flex flex-col items-center justify-center space-y-6">
           <>
-            {selectedDay === "Day 1" && (
+            {selectedDay === "OCT 16" && (
               <>
                 <ScheduleCard
                   day="THU"
@@ -176,7 +176,7 @@ export default function Schedule() {
                 />
               </>
             )}
-            {selectedDay === "Day 2" && (
+            {selectedDay === "OCT 17" && (
               <>
                 <ScheduleCard
                   day="FRI"
@@ -453,7 +453,7 @@ export default function Schedule() {
               </>
             )}
 
-            {selectedDay === "Day 3" && (
+            {selectedDay === "OCT 18" && (
               <>
                 <ScheduleCard
                   day="SAT"
