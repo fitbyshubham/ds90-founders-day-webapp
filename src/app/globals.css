@@ -1,11 +1,15 @@
 @import "tailwindcss";
 
-<<<<<<< HEAD
-@theme {
+/* Remove invalid @theme block and use :root for custom properties */
+:root {
     --color-primary: #66bfff;
     --color-secondary: #2196F3;
-=======
-.hide-scrollbar::-webkit-scrollbar{
+}
+
+.hide-scrollbar::-webkit-scrollbar {
     display: none;
->>>>>>> c934d4513bc68c4b5f66f7642382a80e75353d1c
+}
+.hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }

@@ -102,7 +102,7 @@ const FilterBadge = ({ icon, children, active }: FilterBadgeProps) => (
 
 const MenuItem = ({ img, vegType, name, price }: MenuItemType) => (
   <div className="flex items-center py-3 rounded-xl shadow-md">
-    <div className="w-14 h-14 flex-shrink-0 rounded-md overflow-hidden border border-gray-700 bg-white mt-3 mx-3 relative">
+    <div className="w-14 h-14 flex-shrink-0 rounded-md overflow-hidden border border-gray-700 bg-white mt-0 mx-3 relative">
       <img src={img} alt={name} className="w-full h-full object-cover" />
       {/* vegType icon overlay */}
       <span className="absolute top-1 left-1">
@@ -116,7 +116,7 @@ const MenuItem = ({ img, vegType, name, price }: MenuItemType) => (
       <div className="text-gray-700 text-base font-medium">₹{price}</div>
     </div>
     <div className="flex flex-col items-end ml-2">
-      <button className="bg-red-900/80 border border-red-600 text-red-200 font-bold px-4 py-1 mt-3 mx-3 rounded-lg text-base">
+      <button className="bg-red-900/80 border border-red-600 text-red-200 font-bold px-4 py-1 mt-0 mx-3 rounded-lg text-base">
         ADD +
       </button>
       <span className="text-xs text-gray-700 mb-0.5 mx-3 ">customisable</span>
@@ -133,7 +133,7 @@ const Menu = ({ stallNo, location }: MenuProps) => {
   const menuItems = TypedMenus[stallNo as string] || [];
 
   return (
-    <div className="min-h-screen bg-white pb-8 px-2 pt-2 max-w-md mx-auto relative text-black">
+    <div className="px-5 min-h-screen bg-white pb-8 pt-2 max-w-md mx-auto relative text-black">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center">
@@ -149,19 +149,19 @@ const Menu = ({ stallNo, location }: MenuProps) => {
         </div>
       </div>
       {/* Restaurant Info */}
-      <div className="mt-1">
+      <div className="mt-0 ">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-extrabold leading-tight">
+            <h1 className="text-4xl font-extrabold leading-tight">
               {/* You can fetch the restaurant name using stallNo if needed */}
               {Menus.find((s: StallType) => s.stallNo === stallNo)?.name || "Stall"} <InfoIcon />
             </h1>
-            <div className="flex items-center gap-2 mt-2 text-black/80 text-base font-normal">
+            <div className="flex items-center gap-2 mt-0 text-black/80 text-base font-normal">
               <span className="flex items-center gap-1">
                 Stall No. {stallNo} <span className="mx-1">·</span> {location}
               </span>
             </div>
-            <div className="flex items-center gap-2 mt-1 text-black/80 text-base font-normal">
+            <div className="flex items-center gap-2 mt-0 text-black/80 text-base font-normal">
               <span className="flex items-center gap-1">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3"/>
@@ -183,7 +183,7 @@ const Menu = ({ stallNo, location }: MenuProps) => {
       </div>
 
       {/* Filter bar */}
-      <div className="flex flex-wrap gap-2 mt-5 mb-2">
+      <div className="flex flex-wrap gap-2 mt-0 mb-2">
         <h1 className="font-semibold mr-4">Filters</h1>
         <FilterBadge icon={<VegIcon />} active={true}>Veg</FilterBadge>
         <FilterBadge icon={<EggIcon />} active={false}>Egg</FilterBadge>
@@ -192,7 +192,7 @@ const Menu = ({ stallNo, location }: MenuProps) => {
 
       {/* Orders Section */}
       <div>
-        <div className="flex items-center mt-2">
+        <div className="flex items-center mt-0">
           <h2 className="text-xl font-extrabold">Menu</h2>
         </div>
         <div className="mt-1 space-y-1">
@@ -207,7 +207,7 @@ const Menu = ({ stallNo, location }: MenuProps) => {
       </div>
 
       {/* Search bar */}
-      <div className=" absolute bottom-6 left-7 mt-4 flex items-center bg-[#25232E] rounded-lg px-4 py-2">
+      <div className=" absolute bottom-6 left-7 mt-0 flex items-center bg-[#25232E] rounded-lg px-4 py-2">
         <svg className="w-6 h-6 text-gray-400 mr-2" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           <circle cx={11} cy={11} r={8} stroke="currentColor"/>
           <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35"/>
