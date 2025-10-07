@@ -79,7 +79,7 @@ export default function HomePage() {
   };
   
     return (
-    <div className="min-h-screen bg-gray-100 flex flex-col pb-26">
+    <div className="min-h-screen bg-gray-100 flex flex-col pb-10">
       {/* Header */}
       <div className="bg-gray-900 text-white px-4 pb-6 pt-8 rounded-b-3xl shadow flex flex-col relative">
         <div className="flex mb-4">
