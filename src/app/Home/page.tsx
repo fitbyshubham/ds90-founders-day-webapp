@@ -112,11 +112,11 @@ export default function HomePage() {
       {/* Specials (Top Food) */}
       <div className="px-4 mt-6">
         <h2 className="font-bold text-lg mb-2 text-gray-800">Top Rated Food</h2>
-        <div className="flex space-x-4 overflow-x-auto pb-2">
+        <div className="flex space-x-4 overflow-x-auto pb-2 hide-scrollbar">
           {specials.map((item, i) => (
             <div
               key={i}
-              className={`min-w-[220px] bg-white rounded-2xl shadow-lg flex-shrink-0 ${
+              className={`min-w-[220px] scrollbar-hide bg-white rounded-2xl shadow-lg flex-shrink-0 ${
                 item.isTop
                   ? "border-2 border-orange-400"
                   : "border border-gray-200"
@@ -127,7 +127,7 @@ export default function HomePage() {
                 alt={item.name}
                 className="w-full h-28 object-cover rounded-t-2xl"
               />
-              <div className="p-3">
+              <div className="p-3 scrollbar-hide">
                 <div className="flex items-center justify-between">
                   <span className="font-semibold">{item.name}</span>
                   <span className="text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-600">
@@ -153,11 +153,11 @@ export default function HomePage() {
       </div>
 
       {/* Upcoming Events */}
-      <div className="px-4 mt-7">
-        <h2 className="font-bold text-lg mb-2 text-gray-800">
+      <div className="px-4 hide-scrollbar mt-7">
+        <h2 className="font-bold text-lg mb-2 hide-scrollbar text-gray-800">
           Upcoming Events
         </h2>
-        <div className="flex space-x-4 overflow-x-auto pb-2">
+        <div className="flex space-x-4 hide-scrollbar overflow-x-auto pb-2">
           {events.map((e, i) => (
             <div
               key={i}
