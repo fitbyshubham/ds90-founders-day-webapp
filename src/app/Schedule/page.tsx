@@ -28,7 +28,7 @@ export default function Schedule() {
       
       </div>
 
-        <div className="flex flex-col items-center justify-center space-y-6">
+        <div className="flex flex-col items-center justify-center  space-y-6">
           <>
             {selectedDay === "OCT 16" && (
               <>
@@ -40,7 +40,7 @@ export default function Schedule() {
                   location="CDH"
                   startTime="09:00"
                   endTime="09:25"
-                  coverImage="data:image/jpeg;base64,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"
+                  coverImage="https://static.toiimg.com/photo/60132641.cms?imgsize=312455"
                   numberOfPeople={130}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -73,6 +73,7 @@ export default function Schedule() {
                   location="CDH"
                   startTime="13:00"
                   endTime="14:00"
+                  coverImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmpImaE8oO6M4LGlyfAr0AEOiNjJpjEMxcFQ&s"
                   numberOfPeople={114}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -88,6 +89,7 @@ export default function Schedule() {
                   location="Main Field"
                   startTime="15:00"
                   endTime="17:00"
+                  coverImage="/iha.png"
                   numberOfPeople={106}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -103,7 +105,7 @@ export default function Schedule() {
                   location="Main Field"
                   startTime="TBC"
                   endTime="TBC"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2023/05/3-1-1024x1024.jpg"
                   numberOfPeople={127}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -119,7 +121,7 @@ export default function Schedule() {
                   location="Respective House of the Ward"
                   startTime="17:00"
                   endTime="18:00"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2023/10/29-1024x1024.jpg"
                   numberOfPeople={124}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -135,7 +137,7 @@ export default function Schedule() {
                   location="Rose Bowl"
                   startTime="18:30"
                   endTime="19:10"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2019/01/BF1A0255-min-1024x683.jpg"
                   numberOfPeople={139}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -151,7 +153,7 @@ export default function Schedule() {
                   location="Main Gate"
                   startTime="19:50"
                   endTime="18:00"
-                  
+                  coverImage="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Main_Gate%2C_The_Doon_School.jpg/960px-Main_Gate%2C_The_Doon_School.jpg"
                   numberOfPeople={142}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -167,6 +169,7 @@ export default function Schedule() {
                   location="CDH"
                   startTime="20:00"
                   endTime="20:25"
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2023/01/dddddddddd.jpg"
                   numberOfPeople={146}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -181,28 +184,12 @@ export default function Schedule() {
                 <ScheduleCard
                   day="FRI"
                   date="17"
-                  eventName="Breakfast"
-                  desc="Students have breakfast in school before the start of the day"
-                  location="CDH"
-                  startTime="09:00"
-                  endTime="09:25"
-                  
-                  numberOfPeople={145}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
-                <ScheduleCard
-                  day="FRI"
-                  date="17"
                   eventName="Parents and Old Boys Enter"
                   desc="Parents and Old Boys are allowed to enter the school"
                   location="Main Gate"
                   startTime="09:30"
                   endTime="20:20"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2018/05/about-doon-2.jpg"
                   numberOfPeople={148}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -218,7 +205,7 @@ export default function Schedule() {
                   location="Main Field"
                   startTime="10:30"
                   endTime="14:00"
-                  
+                  coverImage="/Rlhf.png"
                   numberOfPeople={134}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -234,7 +221,7 @@ export default function Schedule() {
                   location="Main Field, Basketball, Squash and Tennis Courts, Swimming Pool"
                   startTime="TBC"
                   endTime="TBC"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2015/04/hockey-apr15.jpg"
                   numberOfPeople={143}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -250,7 +237,7 @@ export default function Schedule() {
                   location="Kilachand Library"
                   startTime="11:00"
                   endTime="12:30"
-                  
+                  coverImage="https://play-lh.googleusercontent.com/TElIAeRk86fXpdR3Ao82GNHnnTz6aM0XV0jL9NE8QFo_fJzprwRGen-7Go72VCZEKok=w526-h296-rw"
                   numberOfPeople={123}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -266,7 +253,7 @@ export default function Schedule() {
                   location="Stalls outside CDH and Old Basketball Courts"
                   startTime="11:00"
                   endTime="18:00"
-                  
+                  coverImage="https://londonbitestours.com/wp-content/uploads/2024/05/IMG_2157.jpg"
                   numberOfPeople={132}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -282,7 +269,7 @@ export default function Schedule() {
                   location="Near CDH/Pavillion"
                   startTime="12:00 & 1:00"
                   endTime="12:15 & 13:15"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2023/10/14-1024x1024.jpg"
                   numberOfPeople={169}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -290,22 +277,7 @@ export default function Schedule() {
                     "./Avatars/m3.jpg",
                   ]}
                 />
-                <ScheduleCard
-                  day="FRI"
-                  date="17"
-                  eventName="Headmaster's Lunch"
-                  desc="Lunch for Silver Jubilee class of 2000 along with class of 1985, 1990, 1995, 200, & 2010"
-                  location="Headmaster's Lawn"
-                  startTime="12:30"
-                  endTime="14:30"
-                  
-                  numberOfPeople={157}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
+                
                 <ScheduleCard
                   day="FRI"
                   date="17"
@@ -314,7 +286,7 @@ export default function Schedule() {
                   location="Main Field"
                   startTime="14:30"
                   endTime="14:45"
-                  
+                  coverImage="/rp.png"
                   numberOfPeople={152}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -330,7 +302,7 @@ export default function Schedule() {
                   location="Main Field"
                   startTime="15:15"
                   endTime="15:30"
-                  
+                  coverImage="https://thinkingpathwayz.weebly.com/uploads/1/0/4/4/104440805/tug-of-war-kidspot_orig.jpg"
                   numberOfPeople={158}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -346,7 +318,7 @@ export default function Schedule() {
                   location="Near Auditorium Steps/CDH"
                   startTime="15:30"
                   endTime="16:30"
-                  
+                  coverImage="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEBIQDxIVFRUVFRUVFRYVFRUVFhYXGBUXFhUVFxUYHSggGBolGxUXITEhJSkrLi4uFx8zODUtNygtLisBCgoKDg0OGxAQGy0lHyUvLTYyLS0tLS0tLTIrLS0tLS0tLy0tLSstLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALIBGgMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAABAMGAgUHAQj/xABCEAACAQIDBQYDBQYFAgcAAAABAgADEQQSIQUGMUFRBxNhcYGRIjKhFCNSscFCYnKCotEzQ5Lw8VPhFSRzo7Kzwv/EABsBAAIDAQEBAAAAAAAAAAAAAAACAQMEBQYH/8QAKxEAAgICAQMDAwMFAAAAAAAAAAECEQMSIQQxQRNRYRQi8AUycSOBobHB/9oADAMBAAIRAxEAPwC1sJEwjDCQPNWM+VaETSNpm0jczbAjQxJmBaDGRlpoQamRaeXmF4XjWTqZ5oXmF4Xk2NqZ3heYT0QsnUyntoCZgSLHUTG0MszAmQEjYZRI8sMslCz3JDYbQhyQyRjJDJDYbQXyTEpGsk8KQ2GUBXJPMkZyTErDYlQFikxKRkpMGSRsPqJVFkDrHaqyB1kWXRiKOsiYRl1kTiQ2XxQs4kLRlxIXEUuihZxIakYcSCpFZogK1YvGasWMrZrh2OwOIu8aqCLVJkxnkHEXeQOZNUMXqGbYC6kbGRloMZGWl6I1Ms0LyO8LybGUSS89zSK8yBk2TqSgz2YAzMSLGUSVZIBI0kqiK2OomQWZBZ6omYEix1A8CzILMlWSZYuwygR5J7kkoWe5ZGwyiQ5J4UjGSYta4F9TwHM9bDnDYdQIMkwKRnLMSkLDUVKTBljTLI2WFjaiNVYu6x6qsWqLDYdRE3WQMI26yBxCy5IVYSBxGqgi7iFlsULOIvUjTiLVBFL4oUqxaM1YtFZqgdkqiKVI3WiVWZMZ5fUVqGLVDNfvTvBSwdMPUBYsbIg4seevIeM0e7u+lPF1O5amabkEr8WYNYXYXsLG2voZpjkinTfJfHoc0sbyqP2ryWV2kRMHMiLTSjLqZ5oZpFmnt4xKiTAz0SIGZgwsZRJlMlWQKZMsVsZRJ0kyCRJJkiNjqJIJKomCCSlgASxAA1JOgA6kxWyxRMgJIFmNEggEXsRfUEH2Ook6rF2G1MQsHsAWYgAC5J0AHUk8JKFnIO2Pb9RsQMCjEU0VWqAaZ3b4hm6gCxA6nwEryZNVZq6XpXnyaLg6dsva2GxOb7NWSplNmyMCR6dOh4Gcl3s2Xjq+2qtKiT3hs9Mq+XJTyqoa4N00489b21lM2dtKth6gq4eo1NwCMymxseIPUeE7PuPi8DigdpNZcUlJaeJZ2KqCFCh9Tl+JUGsz7+rUWdb6b6JvJHlNV/f5+CiJvftfAVO6xRZrcUrre45lag1PmCROlbpb1UMejGmClRADUpnW1+BVuDDTz8JzbtH3zXHMtGgPuKbZgzLZnbUZhfVVsdBoevSWzsf2EaWHfFuCDXsEB/6ak/Fbxa/oo6ycU2p6p2g6vDjeD1JxUZfBeisjZY0yyJlmqziaiNVYtUWPVFiriNY6iJVFkDiOVFiziFjpCjiLuI44iziFlkUJuItUEcqCK1IWXRQlWi0ZrRYxTTE7JXiFYzYYia2uZkxnnNTnXa1hyaNCoAfhdlJA0GYC1zy1WUXdYP8AbcP3fzd4P9P7f9OadQ342phqeGq0qzAtUQhaY1Yn9lrDgAQDc9JybZOPbD1krIAShvY8CCCGHhcExctKaZ6f9O3l0jhXvXzZ2h2kRaVnC784V9KgemfEZh7rr9JvqOIV1DowZTwINwZ0YZIy7M87l6TLi/fFonzQBkV57mlllOpMDJFMgUyRTCxlEYUydIsknpxWxlEbpydJBSjFOVtjqIttPbOHwwBr1At/lUAsx1too1t4xrD0Wch6wtzSnxC9Gf8AE/0HK/E0vatGnidtUKJ4UkBfXiVBqAe5X6zoaCVbWzXPGscY13aszQSI1qi8aJYfuOh08Q5X9ZVMb2i4aliTQ7t2RXyPVBFgQbMQvFgDf20l5S2hGsja+wSwyx05LuaXam8+HwyB64qoLhdaT8T0Nsp4cjK1vbunS2xTpY7BVQr5CozKQtQKTZW5owa4vaWffdqK7PxJxChlyHKDzqHSnb97NYjyiXZWzNsyjm5PVUeQqN+pMrlzwzTi/pw9WHDTr4OEbd2JXwdY0MSmVwAwsQQym4DKRxGh9ogtVgCoJAa2YAmxtqLjnLj2u4/vdqVVHCiqUh6DM39TkekpcyPhnoMUnKClLu0bbdbYzYzF0sMt7M3xn8KDV29hp4kDnPpKjhlpotNBlVFCqBwAAsB7T5+7OdtDCbQpVHNqb3pVD0V+B8gwUnwBn0UwmjDSTOT+qbOcU+wuyyJxGWWROJfZy6Eaoi1RY7VWLVBJTGSEagmq25tBcPQeu4uFGg6kmyj3M3NQTlPaVts1K32VPkpG7fvOR/8AkG3mTFyZNY2aulwerkS8eSu4vb+KqVO8as4N7gKxVV8Ao0l33Q202JpMtXWpTtdvxKb2J8dDOazonZ7hMuGeof8AMfTyXT8y0z4ZS3Or1kILF2/g39QRWrHKgilabTlJCNaKmNVoqYF8TsuJlc3lxpo4avWHFKbFf4rfD9bSx4uUHtRxOTZ9QXsajog/1ZiPZTMadROR02PfLGPyjjeIrvUZnqMWZjdmJuSfEyKEJnPZBNxu9t18M/4qbfMl/wCpeh/OahWsb9Jbtubrad7hhxGZqfTS5yf2/wCJZjUv3R8GfqJ4qWPL2kXLCYpKiLUQ3VhcGTXnOt3N4jh/uqovSueA+JST9R4S90MZTdO8R1KaksDoLcb9J0sWZTXyeb6rop4Z9uPDHAw5njw/tI//ABGkBcMDo9iCMt0tmUv8oOvAmU/e3bqHuxh3RmVs1wubKQNCrHTrNLszZ+Kxr2DEre7M3yKTxIHDN4CU5Ooe2sVZpw/pqeP1MjpHTdi7WpYlM1JrkWzLzUkXsTwPmOk29KaPZWBoYOjlU2Uau7cSfxMeQ+gm4wtdGXOrKV45gQRbzlqbr7u5jyQjs3jvXwQbR3gw+GYLXLAkXFqbkHyYCxMywu9+Ab/PA/iV1/Max1Fp1aYuFqIwvqAysDwPQyr7z7pULUzhqLCpUqBLI9lGhJbI1+AB4EcJXJy8GjDjwy+2Vplcr7Wr0ca2OpAWqFmQsMylG0Cmx0YCwIvcETbt2m4qwy0aIPMnOb+QuLTPE9mtcX7qujDoysn5XlZ3g2DVwbpTrmmWZSwyMTZb2F7gWuQfYyh2jpxWDLXZsQxlfvKlSpa2d2ew1AzMWsCfOWBd/Noqi06dRaaqiIuWmtwEAAN2vqba/pKzLX2e7ujF1nd07xKGQtTuFzls2UEk6L8Bv10HWKXZFBRuS7EODwe09q1B8T1RexdzlopbyGUHwUXna92tjLhMLSwytmyA5mtbMxJZjbkLk6dJqNunaP2WomFo0MOAh+M1/wDDQC5yqtPKDYW1NheObAr7RNCj3iYar8C/eriH+PQfEVFEgE87HjGTOfmlLJDikvY4Dv4jLtPGhuPf1D6E3H0Imhlw7WcO6bWxBcAFxTeykka01HEgX1U8pVK2HdMudSMyhluLXU8GHUcfaZn3O1idwj/CIp3rst3uXF0BhapP2iimp/6lMEKHv+IXAPvz04LLt2Q7TFDaaK5AWsjUSTYWJsy6+LIB6xoSplXV4lkxP3XY72wkTiMMsicTTZ5+hKoItUEdcTXbUxS0aNWs3CmjOf5QTb6SbGUW+ChdoG91TC1Bh8OAHK5mci+UG4UKOul7nwnKajliWYkkkkk8STqSY3tjadTE1nr1rZ3IvYWAsLAAchYRKZZycmehwYVigku/kJZt1t6Dhx3NUZqVyQR8yX4+Y8P+JWYRYycXaHnCM1UjsiVVdVdDdWAIPUEXEWrRPdKtnwVL93Mp9GNvpae7V2pRo/4jgH8I1b2E3xktbZx3jam4owrxQzUV9t4io2WjQIB1BYG9uvQTIUsbzqU/b/tBZE+xd6LXdpHe8XOZdr1InCU2HBawv6owB/31nTMZKjvjs0YnC1aRYLpmDHgpXUE+HEHzmaricfo5qGaMn7nDqlu5TQaPUFwNTohAJ58T7xeTtW+77r9/Ne/ha1pBKD1iCdXw2LV6S1bgKVDXOgGmt+lpyib7YezqmJTI1UinTPyjU666Dh6y/p5uLpK7MXX4I5IJydJf9Jd6KmFquPs92qk2bILq3928RIqO7mNyaCwa10zhT4Flvb9Zb9nbNo0RakgB5sdWPmY+Gmj6fZ3L/Bg+vcIqGNWl5kafdbYBw+Z6uVnPCwvkGoNmPUHWWWioAsAAOgFhFlMYpmXRgoqkYsuSeWW0hynNHt/Y2HbIFplalV1QGnoNTdmdRoQFueE3VMxfZlVa1apVBBFMminOxFjUb1Nh5L4xZ88DYW4PZeAwFHGYVAi5cTSQaAfd1go4ADVX6cpsNk7QSqDjKn3SC6U+9ISwB+8Y3NrlhbjwTxla3r3pq0aj4ekqj4BdySWGYcgOBHjeU3FY8vRoULWWkH53zM7Fix6aWHoespcq4NkOnlkW0uL8/nB2OnvPgL2+1Uf9YA9+E5ZvptMYjG1aim6KRTQjgVTS4PME5j6zRwiOVmrD00cTtBOodiK640/+gP8A7f7zl82ew9v4rBlzhamQuFD/AAq18t8vzA/iPvFLM0HODij6MxmCp1qb0aq5kcZWU3Fx00mg2dj8PhsXT2YGtkpnuVAZjkcqQjWGhXK3xHiLXNwZVtxt8do46o+FNWgrhDUWo1AtcKQGXKtRR+0Dfw4TDbGy9q1Nq4dPtVM1UQslVaQRKY1ZlKkkm9lB46P0vCzDHA43GT/Pc0fb1gSuNw9flUo5R/FTc3+lRYttDY6192sLjLfeYV6iX4lqTV2GU+TOCOmvWbvtF2RtGtssYnGVVdqNS5prh+7ZLk06hL5viW+XULYgA8Jsux6muK2PiMJWsU7yrTtzCVEVr/6mYg+Era+5mxZNMMXf7WcMjuxaVN8TQSr/AIbVaavrb4C4Da8tL6yPaWBqUK1ShVFnpuyMPEG2nUcwYtKzf3R9bsJC4iG6mPbEYDC13+Z6SFvFrWJ9SDNi80pnnJRabQpUEpPau9VdnP3fAugqHnkJ/Vso9ZeagieMw6VEanUUMrAhlYXBHQiS+VQ+KWs1L2PmEzyWDfrZtDDY6pQw1wqhSQTfKzLmKgnUixHGV+ZWqPQRkpJNBCEc2Tg++rJRvbOcoPQ2Nr+F4A3XJstgYiuyHD066UELFmZmCsSQBYcz8vK3nMN1qObFC4DZQ7G+vgD7kRh9ysYDb7u3XPp+V/pN1u9sJ8MXaoyksABluba3OpA8JdCEm1aM2TJBRdNcmwrxQxuvFDNqOejsuNlH7Q3YbPxGTjZQfIuob6Xl4xsrG38IK1CrRP7aMvkSND72mRco5fTtRnFv3R8/wklaiyMyOLMpIIPIjQiTbLwve1qdL8TAHy4t9AZno9a2krFZvdz8VkxGQ8HUj1GoP0PvHt4t3adOl3lAH4fnBJN16+krWErFKiuOKsCOmh5+Etp45KyjaHUYnr5OngzMGU7Y+2C1exBscwABuSTkABPDQLe/hLapm+GRTVo4mbp3idMZQxmmYmhi+19pCggYnLfnpwBUEDxsxI/hkykkrK4Y3KWqNlj6zBAlM2eociHpf5n/AJQCfQTHdzBUgalRFFxUemp55Ey07e6TXbsY04m+JcAZR3YA4A2DVG15n4R5CO7GxWTAd8fw1avqWZv1lN3yaHjcIuHngpG8GJ7zFVn6uQPJfhH0E18POEos6iVKghCECQhCWbcLds47E2Kq1KnlNYM7UyVbMBlKgnNoTbThxF4ESairY52WbZo4XGM2IKIj02HeMxGW2oAA0bN0I5C0vO72ObFbQoYonKrNiwmQlqbrTo4enmBdAxGbMeXDw1T383Lw1HBKuBoIKj16SAnM1R85KhVdj8OpBPKwMg7My1tm/FmBO0BYgjJbITrfUE5eWmYwMs3GcXNfnDOlbZ2euIw9bDv8tVGQ8rZhYH3nAOzHbdfA7TGGIBWtVXD1ULAAMHyhwT+0pJ87kdJ9GGaWpups81/tJwtI1cwfPlF8wNw1uGa4ve14jXNlODMoRlCStM4d20YI09rVGtYVadOoPH4chPukok+ku1HdhMbgnYAd9QVqlJuBsBd6ZPRgPcCfNsSSpnS6XIp418H0P2RV82yKAJvkaqv/ALjMB/VLa85z2FYwNg8RR5062f0qIAPrTM6O8tj2OX1MayyF6kXeMPKT2nbxNhMLkpG1WvdFINiigfG4trfUAfxX5RroTHBzkoo5l2lbQoV8e7UNcoFN25Oy3BI8BoL88sqs9lg3c3QxOMU1KeVKYuM73AYjkoAJOvE8B9Jn5bO6tccab4RXpu9yxfHUNObf/Bprdo4KpQqtRqrldTYj8iDzB43jG72K7rFUKh4BwD5H4SfYwjwwnzF17HW60QrR+tEK06COKjX14oY3XihjFh0XdnbrYvBUsRU+Zs4bh+y7KOAAvYDkPITzFVZzrAbQbZWJbDVCWw1U5kbmvLN+QYeAPhLJtPaoWk1VSGCrn01uo1NvS9pkxmbN01TuP7X2KX2lIor02AALIcxAFzZrAnrENy1XvmdjqBlX+JgT6fCje8T3k2uMVW7wAhQoUA8eJJ4ec3e6eBVKYrn53uB4Le2nnaRBbZODqyXp9NrLvVFhruLa2sdNed9LfWc+25s/uapUfKdV8unpwm8rYhzjRRVvu7h2Ww42zHXiNQD6w3sS9FW/Cw+oP/aW5anFv2Kemi8U0vEvxC25tEXqVCNQAo9bk/kJaaFYMqsOBAIlJ3ZxmStlJ+F9PC/7J/T1j+z37rGujnR82XpdiGGn09IYsijFE9Rhc5yfxaLHjdr0aNhUaxPIAk262HKL7w00xODZ6dny/GhHh839N9PCUra1YvXqsfxEegNh+UsG5FbSshOnwkDlrmB99PaR6u8nHwD6ZYorInyh/dPHqMBXUaNTFQnxzLdW/T0mw2ftJGwiYZkKse7ogMNH+8VXseoFyRxlCoVGp1HpK2jE02/eAbx8peNl4mjV+0Ibd2XFRb6WuLZgeRupN/GRjlaobNiUW5e7s929uvRVqRoMVNWqKYU/EouGNweIAy+M0m0thVaNFazshVmyrYm5+axtbgQt/UTZbQ2wQ9IF84pF2WpxzEoVUG2hYE6keE128e3O8KYZbZKZsv8AKMoNxxvr6BephKkGJZOEamRYitlEK9YKPHkIsiZjmfnwH++Urk/CNMY+WOU2uLzqHYiLPjHPC1BR53qk/p7zl6FRoLeUuHZ/vGuEaslUgU2CuW5hgwQC3O+ceVvOMijPFuDSOo7/AApthlq1auSnQZqrAMys7Ck60kVl1BNRl4dJWNj7fo0K+yaSIO4pUWoviB8NM1nRO9INrNaoqgte16nHSUPtA3tqYuqqJcUFAZAQRnJ/zCD7Dwv1MtG7O1TVpYP7Sq92tDEUrMBZqS06KsWHS6v6SLt0VLC4Y1t+cM7L34nhricpwO8VfDo9BAaiilUqUCxJanlBIoOT/iEDJzuM1jwi3ZtvRXrLWWqSUQU8pYksGyKpGYnUHIW8Ced9J80Zn071cvY6bvFtChTwmIfE60hSfvAOLKRlKjxN7es+VKlrnKCBc2ubm3K5HEztnaTtgjZ1ZVaxconoWBI9lM4jK8nc3dDCoN/J2nsLwwXC4mseL1QnpTQH86h9pb8bvPQWp9nzL35qJTWkT8TBmW72/CFYt/KZQuz3efDUtn92z5DQztUvzDOWDLb5uIFuNx4iVnD720X2scfiFcKoIpKoBIsMil9ehY6c7SbpIqlheTJNtdvxHdWqifPvaNtz7XjqhU3p0vuqfSy/M3q19elp03au9FP7DVxVBwwyHIf3z8Kgg8CGI0nEMNQLsQLmys5/hVSzH2BhkfgbosVNyZa9xNzvtZNavmWgpsLaGqw4qDyUcyPIeHW6dJKaLTpqFVRZVAsAByAlO7OtrtUoOhFkplFTUn9gAj6A28fGWlq3SWY0krKOqySeRxfgpXabsTvKYxdMfFTGVx1S+jeak+x8JzGW1t8sQuIqd+Lo3wVaTagWsKgUX04MvkdbzRbf2f8AZ8Q9EHMAQVP7rAMt/GxEpk03aOhgUoLWR1HZtc1MPRqNxamjNbqVF5Xht/8A8z9nqKFJYLfkPhJ487nLbwMb3DxtM4ECoyr3dRkuzAA5vjXj5kW/di+827eGbKaDLTquRksTkc8AumiEmwEu3dJoxpQWSUZL+B2tSMVNE9Itu/vBmcYXGDJUByBjpdhplccm8eBlt/8ADfCXRypooy3idSKCdojH0u6q2Wsl2QjgevvzHrNXhNsMmGrYdr6iy35XNnH6zV4bENTdXXipv/cTLF1VaoXAsCbkeJ+Ye95k38+TqrElx4/0yTaNAI4ToiX8SRc/nN9gNuUadKnTJJIUXsNAeJ/2Jp9uVleoHU8UUnwOuntaa6TvpJ6kuCyRWw9S2m6VXqqAWYn5gTYE8puMdjhWwbPbW4BHQ5h+n5ysxqjjStJ6VgQ5BvzFrf2kRyNJoJ4k2mlyqF0YggjiDceke2ltQ1shKhWW/wAQPH05azXwiW6oscU3ZlUcsSx4kknzPGbRdqBMOtOjdHJ+8YcT0sZqYQUmuxEop9zNBcm56m/pf3J/ObrZFWnRpitVs2YkBCLkAH5l5cetuE0YtY9eX6z1nJtfkLDy4yYyrkJR2VFp2ltajXQEEjKrWBFiGJW3hawM0ddFZRUptdh862IIHJh1HXppEg2hHWNbIP39PS+tiPAgg+ljHc3N0ytY1jXAuWzNrzIkuOFmFukxx1LJUdRwDEDyvp9JE7k6mJ7os70wp8RbqI9itQbHVbE9emnvE6Tga2ueXST0ay5jUf0Uc7ixBbkOsE+KBrmyGmpdlW+pIUX4DgBLns8Ll7t6jBaJPxBvgZDY2BPy8Bw6SpbKqKtamzcM35iwPuZud56pACg6Px8cv/I9pZjpRcinNcpqJZjtek3dmiykU2sQOSsCDp52ms2DihhcXWw66JUsyeBte3sSP5ZUME7B1ym1yF9yJuNvE02oVCbuBqRzykEH6mMp2tvYr9FRel9zab47YWthqahhcuGK3BK2VrggcCCbSlxvaqKK1TKQRmJuPHUj04RSVTdyNGKChGkMYyjkYLYg5VLA8QSL2/I+F7coY2jkcgAgWBW/NSNG9ZAzEm5N/OS4jEs+XMflUIPIcIo/Jsxi2Gzu65NiCfRaa3HvaY7IrClRxNb9pk7hPOpfOfRQfea+riSyJTsAEzcOZY3JPjoB6TZUMOhfB0SRlfK7+LO1ivnZQvvJEaSTOgbtUEwuERSQNO8qEmwzMATc9ALD0m0wO0qVYE0qiuAbHKQbeco+/wBjGC0qI0DXZvG2ijy4/TpNRuVjGp4ymAdKl0YdbjT62lznq9TnfTvJjeVvl2x7tGwQTFLVHCqtz/Evwn6ZZVqjltSf92t68Je+0usmShT/AG7s3ktrfU/lKjRq0jhzTJZHDFwfmSppYKRxUjWx4am/Iyqa+5mzpZN4otiOY2tc2ve3K/W0Z2fdqtJCxUZ1F72y5mAJHSZ7MOHuwxIqZSpytTIzK3EHKdGHI+cSvENHfgvna3s1KWIo1EFjUQ5vEoQAfOxA9Ilhu0HFIipZWyqFueJsLXPjK7tja1bFVO9rtmayr4AAAAAcuF/MmWHA7l1KlKnUCv8AGitoy2+JQenjJvngzxxxhjjHLzRUIQhINIQhCABCEIAEIQgAQhCABCEIAEmw+JdL5DYkWvz9DykMIAZO5JJJJJ4k8ZjCEACEIQA9Yg8Bbh/zGsdj2qhA41UEX63ty9IpCTZFLueq1jcRjH416rBntoLC3Djf9YtCFsKV2EIQkEhCEIAEypuVIYaEEEeY1ExhAB/bG1XxLh6gAIXKAt7cSefnF8BiO7q06hF8jq9uF8rA2v6SCEmyFFJUuw9tjalTE1TVqWvYAAcAo4Ae8UquCbquUaaXJ5a6nqdfWYQkAkkqQQhCBIR2ntfEqAq16oAAAAqMAANAAL6CJQgFBCEIAEIQgAQhCABCEIAEIQgAQhCABCEIAEIQgAQhCABCEIAEIQgAQhCABCEIAEIQgAQhCABCEIAEIQgAQhCAHsIQkkBCEIAEIQgAQhCABCEIAEIQgAQhCABCEIAEIQgAQhCABCEIAEIQgAGeQhIJCEIQAIQhAAhCEACEIQAIQhAD/9k="
                   numberOfPeople={158}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -362,7 +334,7 @@ export default function Schedule() {
                   location="BML Munjal Auditorium"
                   startTime="16:15"
                   endTime="16:45"
-                  
+                  coverImage="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/71/d9/9a/beach-sand-sculptures.jpg?w=1200&h=1200&s=1"
                   numberOfPeople={166}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -378,7 +350,7 @@ export default function Schedule() {
                   location="BML Munjal Auditorium"
                   startTime="17:00"
                   endTime="18:30"
-                  
+                  coverImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlDpAMYqYQHVy_z1_7H3ofRJ1LUH4hptT22A&s"
                   numberOfPeople={163}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -394,7 +366,7 @@ export default function Schedule() {
                   location="Rose Bowl"
                   startTime="18:45"
                   endTime="20:15"
-                  
+                  coverImage="https://i0.wp.com/ishootshows.com/wp-content/uploads/2013/07/Screen-Shot-2013-07-07-at-5.21.40-PM.jpg?fit=435%2C405&ssl=1"
                   numberOfPeople={120}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -410,7 +382,7 @@ export default function Schedule() {
                   location="Main Gate"
                   startTime="20:20"
                   endTime="20:30"
-                  
+                  coverImage="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Main_Gate%2C_The_Doon_School.jpg/960px-Main_Gate%2C_The_Doon_School.jpg"
                   numberOfPeople={145}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -426,7 +398,7 @@ export default function Schedule() {
                   location="CDH"
                   startTime="20:30"
                   endTime="20:55"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2023/01/dddddddddd.jpg"
                   numberOfPeople={135}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -434,43 +406,13 @@ export default function Schedule() {
                     "./Avatars/m3.jpg",
                   ]}
                 />
-                <ScheduleCard
-                  day="FRI"
-                  date="17"
-                  eventName="Headmaster's Dinner"
-                  desc="Dinner for Diamond Jubilee Class of 1965 and Golden Jubilee Class of 1975 along with Class of 1960, Class of 1970 and Class of 1980"
-                  location="Headmaster's Lawn"
-                  startTime="20:30"
-                  endTime="21:30"
-                  
-                  numberOfPeople={137}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
+                
               </>
             )}
 
             {selectedDay === "OCT 18" && (
               <>
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="Breakfast"
-                  desc="Breakfast for Students and Staff"
-                  location="CDH"
-                  startTime="09:00"
-                  endTime="09:25"
-                  
-                  numberOfPeople={127}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
+                
                 <ScheduleCard
                   day="SAT"
                   date="18"
@@ -479,7 +421,7 @@ export default function Schedule() {
                   location="Main Gate"
                   startTime="09:30"
                   endTime="16:30"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2018/05/about-doon-2.jpg"
                   numberOfPeople={168}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -495,7 +437,7 @@ export default function Schedule() {
                   location="Skinners"
                   startTime="10:30"
                   endTime="15:00"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2024/04/JH_TH_logo_png4.png"
                   numberOfPeople={144}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -503,38 +445,8 @@ export default function Schedule() {
                     "./Avatars/m3.jpg",
                   ]}
                 />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="DSOBS Annual General Meeting"
-                  desc="Meeting of DSOBS Members"
-                  location="Kilachand Library"
-                  startTime="11:00"
-                  endTime="12:30"
-                  
-                  numberOfPeople={139}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="Headmaster's Lunch"
-                  desc="Lunch for Chief Guest, Board of Governors, IPSS Members, Donors, Invited Guests & Class of 1955"
-                  location="HM’s Garden"
-                  startTime="12:30"
-                  endTime="14:30"
-                  
-                  numberOfPeople={163}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
+                
+                
                 <ScheduleCard
                   day="SAT"
                   date="18"
@@ -543,7 +455,7 @@ export default function Schedule() {
                   location="Skinners"
                   startTime="13:00"
                   endTime="14:00"
-                  
+                  coverImage="https://static.toiimg.com/photo/47782089.cms"
                   numberOfPeople={178}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -551,38 +463,7 @@ export default function Schedule() {
                     "./Avatars/m3.jpg",
                   ]}
                 />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="Light Tea for IPSS Members"
-                  desc="Tea for IPSS Members"
-                  location="Kilachand Library Garden"
-                  startTime="14:45"
-                  endTime="15:00"
-                  
-                  numberOfPeople={125}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="IPSS Meeting"
-                  desc="Meeting of IPSS Members"
-                  location="Kilachand Library"
-                  startTime="15:00"
-                  endTime="16:45"
-                  
-                  numberOfPeople={174}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
+                
                 <ScheduleCard
                   day="SAT"
                   date="18"
@@ -591,7 +472,7 @@ export default function Schedule() {
                   location="Art & Media Centre"
                   startTime="15:00"
                   endTime="15:45"
-                  
+                  coverImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJCVzfhveaxVORgRYyktxJlQ9AODeqtnf4Og&s"
                   numberOfPeople={145}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -599,63 +480,17 @@ export default function Schedule() {
                     "./Avatars/m3.jpg",
                   ]}
                 />
+              
+                
                 <ScheduleCard
                   day="SAT"
                   date="18"
-                  eventName="Chief Guest Weekly Interaction"
-                  desc="Chief Guest spends time with the Weekly Team"
-                  location="Art & Media Centre"
-                  startTime="15:45"
-                  endTime="16:15"
-                  
-                  numberOfPeople={179}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="Chief Guest Photograph"
-                  desc="Photograph session with Chief Guest"
-                  location="Guru’s Lawn (Near Main Building)"
-                  startTime="16:20"
-                  endTime="16:40"
-                  
-                  numberOfPeople={173}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="Tea for IPSS Members"
-                  desc="Evening Tea for IPSS Members"
-                  location="Kilachand Library Garden"
-                  startTime="16:45"
-                  endTime="17:15"
-                  
-                  numberOfPeople={175}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="Founder’s Day Speeches & Programme"
+                  eventName="Founder’s Day Programme"
                   desc="Founder’s Day main function and programme"
                   location="Rose Bowl"
                   startTime="18:00"
                   endTime="20:00"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2016/10/founders_speeches.jpg"
                   numberOfPeople={156}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -663,31 +498,16 @@ export default function Schedule() {
                     "./Avatars/m3.jpg",
                   ]}
                 />
+                
                 <ScheduleCard
                   day="SAT"
                   date="18"
-                  eventName="Closing Song & Visual Display"
-                  desc="Closing song ‘We Did Start the Fire’ with boys’ dance, drone/visual display"
-                  location="Rose Bowl"
-                  startTime="20:00"
-                  endTime="20:20"
-                  
-                  numberOfPeople={142}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="Founder’s Day Music Programme"
+                  eventName="Founders Music Production"
                   desc="Music Performance as part of Founder’s Day celebrations"
                   location="Rose Bowl"
                   startTime="20:20"
                   endTime="21:00"
-                  
+                  coverImage="https://www.doonschool.com/wp-content/uploads/2024/10/464193763_539644192148610_4505489439754893471_n-1024x1024.jpg"
                   numberOfPeople={156}
                   avatars={[
                     "./Avatars/m1.jpg",
@@ -695,22 +515,7 @@ export default function Schedule() {
                     "./Avatars/m3.jpg",
                   ]}
                 />
-                <ScheduleCard
-                  day="SAT"
-                  date="18"
-                  eventName="Chief Guest Departure"
-                  desc="Chief Guest departs from campus"
-                  location="HM’s Residence"
-                  startTime="21:15"
-                  endTime="21:30"
-                  
-                  numberOfPeople={143}
-                  avatars={[
-                    "./Avatars/m1.jpg",
-                    "./Avatars/m2.jpg",
-                    "./Avatars/m3.jpg",
-                  ]}
-                />
+               
                 <ScheduleCard
                   day="SAT"
                   date="18"
@@ -719,7 +524,7 @@ export default function Schedule() {
                   location="Campus"
                   startTime="21:15"
                   endTime="21:30"
-                  
+                  coverImage="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Main_Gate%2C_The_Doon_School.jpg/960px-Main_Gate%2C_The_Doon_School.jpg"
                   numberOfPeople={134}
                   avatars={[
                     "./Avatars/m1.jpg",

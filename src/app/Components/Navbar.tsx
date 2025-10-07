@@ -42,10 +42,10 @@ export default function Navbar() {
       <div className="relative w-full flex justify-center items-end pb-4 pointer-events-auto">
         <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-20">
           <button
-            className="bg-black rounded-full w-16 h-16 flex items-center justify-center shadow-lg border-4 border-white"
+            className="bg-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg border-4 border-black"
             onClick={handleFoodClick}
           >
-            <span className="bg-secondary rounded-full w-10 h-10 flex items-center justify-center">
+            <span className="bg-blue-500 rounded-full w-10 h-10 flex items-center justify-center">
               <CookingPot className="text-black w-6 h-6" />
               <span className="absolute -bottom-6 text-sm font-semibold text-white/80">
                 Order
@@ -89,8 +89,8 @@ type NavItemProps = {
 function NavItem({ icon, label, active }: NavItemProps) {
   return (
     <div className="flex flex-col items-center flex-1">
-      <span className={active ? "text-primary" : "text-white/80"}>{icon}</span>
-      <span className={`mt-1 text-sm font-semibold ${active ? "text-primary" : "text-white/80"}`}>{label}</span>
+      <span className={active ? "text-[#66bfff]" : "text-white/80"}>{icon}</span>
+      <span className={`mt-1 text-sm font-semibold ${active ? "text-[#66bfff]" : "text-white/80"}`}>{label}</span>
     </div>
   );
 }
