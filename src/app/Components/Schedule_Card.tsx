@@ -22,7 +22,7 @@ export default function ScheduleCard({
   day,
   date,
   desc,
-  online = false,
+  online = true,
   eventName,
   startTime,
   endTime,
@@ -66,8 +66,8 @@ export default function ScheduleCard({
         {/* Online status */}
         {online && (
           <div className="absolute right-4 top-4 flex items-center space-x-1 z-10 bg-white/80 px-2 py-1 rounded shadow">
-            <span className="w-2 h-2 rounded-full bg-green-500" />
-            <span className="text-xs text-green-700 font-medium">Online</span>
+            <span className="w-2 h-2 rounded-full bg-red-500" />
+            <span className="text-xs text-red-700 font-medium">Happening Now</span>
           </div>
         )}
       </div>

@@ -554,7 +554,7 @@ export default function InfoPage() {
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
   return (
-    <div className="w-full px-2 sm:px-4 max-w-3xl mx-auto bg-white rounded-3xl pb-10">
+    <div className="w-full px-4 sm:px-4 max-w-3xl mx-auto bg-white rounded-3xl pb-10">
       <div className="text-3xl font-bold mb-3 mt-6">Explore the School</div>
       <div className="relative mb-4 ">
         <input
@@ -583,19 +583,19 @@ export default function InfoPage() {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="fixed inset-0 z-50 flex flex-col bg-white rounded-t-2xl shadow-xl overflow-y-auto"
           >
-            <div className="flex-1">
+            <div className="flex-1 ">
               <img
                 src={selectedImage.image}
                 alt={selectedImage.name}
-                className="h-64 w-full object-cover"
+                className="h-70 w-full object-cover "
               />
             </div>
-            <div className="p-6 mb-100">
-              <h1 className="text-3xl font-bold">{selectedImage.name}</h1>
+            <div className="p-6 mb-20">
+              <h1 className="text-3xl font-bold mb-3">{selectedImage.name}</h1>
               <p className="mb-6 text-gray-700">{selectedImage.description}</p>
               <button
                 onClick={() => setSelectedImage(null)}
-                className="mt-2 px-0 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700"
+                className="mt-2 px-4 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700"
               >
                 ← Back to Houses
               </button>
