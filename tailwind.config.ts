@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
+      colors: { 
         brown: {
           50:  "#fdf8f6",
           100: "#f5ebe6",
