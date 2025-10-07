@@ -73,12 +73,12 @@ export default function HomePage() {
   const router = useRouter();
   const handleAboutRoute = () => {
     router.push("/InfoPage");
-  }
+  };
   const handleTeamRoute = () => {
     router.push("/Team");
   };
-  
-    return (
+
+  return (
     <div className="min-h-screen bg-gray-100 flex flex-col pb-26">
       {/* Header */}
       <div className="bg-gray-900 text-white px-4 pb-6 pt-8 rounded-b-3xl shadow flex flex-col relative">
@@ -100,9 +100,10 @@ export default function HomePage() {
               On the 90th year of the school, get to know about some of the most
               famous places amongst Doscos.
             </p>
-            <button 
-            onClick={handleAboutRoute}
-            className="bg-orange-500 text-white px-4 py-1 rounded-full font-semibold text-sm hover:bg-orange-600 transition">
+            <button
+              onClick={handleAboutRoute}
+              className="bg-secondary text-white px-4 py-1 rounded-full font-semibold text-sm hover:bg-orange-600 transition"
+            >
               Get to Know
             </button>
           </div>
@@ -110,15 +111,15 @@ export default function HomePage() {
       </div>
 
       {/* Specials (Top Food) */}
-      <div className="px-4 mt-6">
+      <div className="px-4 mt-6 scrollbar-hide">
         <h2 className="font-bold text-lg mb-2 text-gray-800">Top Rated Food</h2>
-        <div className="flex space-x-4 overflow-x-auto pb-2">
+        <div className="flex space-x-4 overflow-x-auto pb-2 scrollbar-hide">
           {specials.map((item, i) => (
             <div
               key={i}
               className={`min-w-[220px] bg-white rounded-2xl shadow-lg flex-shrink-0 ${
                 item.isTop
-                  ? "border-2 border-orange-400"
+                  ? "border-2 border-blue-300"
                   : "border border-gray-200"
               }`}
             >
@@ -135,14 +136,14 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="flex items-center mt-1">
-                  <FaStar className="text-yellow-400 mr-1" />
+                  <FaStar className="text-yellow-300 mr-1" />
                   <span className="text-xs font-bold">{item.rating}</span>
                   <span className="ml-2 text-xs text-gray-500">
                     {item.stall}
                   </span>
                 </div>
                 {item.isTop && (
-                  <span className="inline-block mt-2 text-xs bg-orange-100 text-orange-500 px-2 py-0.5 rounded-full font-semibold">
+                  <span className="inline-block mt-2 text-xs bg-blue-100 text-secondary px-2 py-0.5 rounded-full font-semibold">
                     Most Popular
                   </span>
                 )}
@@ -157,7 +158,7 @@ export default function HomePage() {
         <h2 className="font-bold text-lg mb-2 text-gray-800">
           Upcoming Events
         </h2>
-        <div className="flex space-x-4 overflow-x-auto pb-2">
+        <div className="flex space-x-4 overflow-x-auto pb-2 scrollbar-hide">
           {events.map((e, i) => (
             <div
               key={i}
@@ -180,9 +181,7 @@ export default function HomePage() {
 
       {/* Team Section */}
       <div className="flex flex-col items-center justify-center pt-3 mx-3">
-        <button 
-        onClick={handleTeamRoute}
-        className="w-full">
+        <button onClick={handleTeamRoute} className="w-full">
           <TeamCard />
         </button>
       </div>
