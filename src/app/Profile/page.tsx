@@ -6,7 +6,7 @@ const Profile: React.FC = () => {
     <div className="fixed bottom-0 left-0 w-full flex justify-center bg-white pb-30">
       <div className="w-full bg-white overflow-hidden flex flex-col max-h-full">
         <div className="flex-1 overflow-y-auto p-6">
-          <div className="text-center mb-6">
+          <div className="text-center mt-20 mb-6">
             <img
               src="https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small_2x/profile-icon-design-free-vector.jpg"
               alt="Profile"

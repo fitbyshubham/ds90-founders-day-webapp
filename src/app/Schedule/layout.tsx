@@ -27,11 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-  <div>
-    <div className="bg-black text-white p-6 rounded-b-3xl shadow-lg">
-        <h1 className="text-2xl font-bold">Schedule</h1>
-    </div> 
-  </div>
+  
         {children}
       </body>
     </html>
