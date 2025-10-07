@@ -2,6 +2,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { FaStar } from "react-icons/fa";
+import TeamCard from "../Components/TeamCard";
 
 const specials = [
   {
@@ -73,9 +74,12 @@ export default function HomePage() {
   const handleAboutRoute = () => {
     router.push("/InfoPage");
   }
+  const handleTeamRoute = () => {
+    router.push("/Team");
+  };
   
     return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div className="min-h-screen bg-gray-100 flex flex-col pb-26">
       {/* Header */}
       <div className="bg-gray-900 text-white px-4 pb-6 pt-8 rounded-b-3xl shadow flex flex-col relative">
         <div className="flex mb-4">
@@ -175,71 +179,13 @@ export default function HomePage() {
       </div>
 
       {/* Team Section */}
-      <section className="px-4 mt-8 pb-32">
-        <h2 className="font-bold text-lg mb-4 text-gray-800 text-center">
-          Meet the Team
-        </h2>
-        <div className="flex flex-col items-center space-y-6">
-          {/* Top of the pyramid */}
-          <div className="flex justify-center">
-            <div className="bg-white rounded-2xl shadow flex flex-col items-center p-6 w-40 h-56 mx-2">
-              <img
-                src={team[0].img}
-                alt={team[0].name}
-                className="w-24 h-24 rounded-full object-cover mb-3"
-              />
-              <div className="font-semibold text-base text-center">
-                {team[0].name}
-              </div>
-              <div className="text-sm text-gray-500 text-center">
-                {team[0].role}
-              </div>
-            </div>
-          </div>
-          {/* Second row */}
-          <div className="flex justify-center space-x-8">
-            {team.slice(1, 3).map((t, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl shadow flex flex-col items-center p-6 w-40 h-56 mx-2"
-              >
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  className="w-24 h-24 rounded-full object-cover mb-3"
-                />
-                <div className="font-semibold text-base text-center">
-                  {t.name}
-                </div>
-                <div className="text-sm text-gray-500 text-center">
-                  {t.role}
-                </div>
-              </div>
-            ))}
-          </div>
-          {/* Third row */}
-          <div className="flex justify-center space-x-8">
-            {team.slice(3, 5).map((t, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-2xl shadow flex flex-col items-center p-6 w-40 h-56 mx-2"
-              >
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  className="w-24 h-24 rounded-full object-cover mb-3"
-                />
-                <div className="font-semibold text-base text-center">
-                  {t.name}
-                </div>
-                <div className="text-sm text-gray-500 text-center">
-                  {t.role}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="flex flex-col items-center justify-center pt-3 mx-3">
+        <button 
+        onClick={handleTeamRoute}
+        className="w-full">
+          <TeamCard />
+        </button>
+      </div>
     </div>
   );
 }
