@@ -23,7 +23,7 @@ export default function Search() {
   };
 
   return (
-    <div className="w-60">
+    <div className="w-80">
       <form onSubmit={handleSubmit}>
         <div className="flex items-center border border-gray-300 rounded-full shadow">
           <img
