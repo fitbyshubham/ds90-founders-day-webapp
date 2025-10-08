@@ -29,7 +29,7 @@ export default function Navbar() {
     router.push("/InfoPage");
   };
 
-  const hideNavbarRoutes = ["/Login", "/OTP", "/Cart"];
+  const hideNavbarRoutes = ["/Login", "/OTP", "/Cart", "/Tabulation"];
   const shouldHideNavbar = hideNavbarRoutes.includes(pathname);
   if (shouldHideNavbar) return null;
 
